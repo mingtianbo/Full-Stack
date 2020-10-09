@@ -455,3 +455,119 @@ hr元素可用于分隔内容。
 ### Test
 
 1. 在HTML代码中，排版一首唐诗
+
+## 03
+
+### HTML样式
+
+**HTML的`style`属性**
+
+style属性的作用：
+
+**提供了一种改变所有HTML元素的样式的通用方法。**
+
+通过 HTML 样式，能够通过使用 style 属性直接将样式添加到 HTML 元素，或者间接地在独立的样式表中（CSS 文件）进行定义。
+
+您可以在我们的 [CSS 教程](https://www.w3school.com.cn/css/index.asp)中学习关于样式和 CSS 的所有知识。
+
+在我们的 HTML 教程中，我们将使用 style 属性向您讲解 HTML 样式。
+
+<hr/>
+
+#### 背景颜色
+
+`background-color`属性为元素定义了背景颜色：
+
+```html
+<html>
+  	<body style="background-color:yellow">
+      	<h2 style="background-color:red">This is a heading</h2>
+      	<p style="background-color:green">This is a paragraph</p>
+  	</body>
+</html>
+```
+
+<hr/>
+
+#### 字体、颜色和尺寸
+
+`font-family`、`color`以及`font-size`属性分别定义元素中文本的字体系列、颜色和字体尺寸：
+
+```html
+<html>
+		<body>
+				<h1 style="font-family:verdana">A heading</h1>
+				<p style="font-family:arial;color:red;font-size:20px;">A paragraph.</p>
+		</body>
+</html>
+```
+
+<hr/>
+
+#### 文本对齐
+
+`text-align`属性规定了元素中文本的水平对齐方式：
+
+```html
+<html>
+		<body>
+				<h1 style="text-align:center">This is a heading</h1>
+				<p>The heading above is aligned to the center of this page.</p>
+		</body>
+</html>
+```
+
+<hr/>
+
+### HTML文本格式化
+
+HTML可定义很多供格式化输出的元素，比如粗体和斜体字。这里列出部分供参考。
+
+#### 文本格式化标签
+
+| 标签       | 描述           |
+| ---------- | -------------- |
+| `<b>`      | 定义粗体文本。 |
+| `<big>`    | 定义大号字。   |
+| `<em>`     | 定义着重文字。 |
+| `<i>`      | 定义斜体字。   |
+| `<small>`  | 定义小号字。   |
+| `<strong>` | 定义加重语气。 |
+| `<sub>`    | 定义下标字。   |
+| `<sup>`    | 定义上标字。   |
+| `<ins>`    | 定义插入字。   |
+| `<del>`    | 定义删除字。   |
+| `<style>`  | 定义样式。     |
+
+<hr/>
+
+#### “计算机输出“标签
+
+| 标签     | 描述                 |
+| -------- | -------------------- |
+| `<code>` | 定义计算机代码。     |
+| `<kbd>`  | 定义键盘码。         |
+| `<samp>` | 定义计算机代码样本。 |
+| `<tt>`   | 定义打字机代码。     |
+| `<var>`  | 定义变量。           |
+| `<pre>`  | 定义预格式文本。     |
+
+<hr/>
+
+#### 引用和术语定义
+
+| 标签           | 描述               |
+| -------------- | ------------------ |
+| `<abbr>`       | 定义缩写。         |
+| `<acronym>`    | 定义首字母缩写。   |
+| `<address>`    | 定义地址。         |
+| `<bdo>`        | 定义文字方向。     |
+| `<blockquote>` | 定义长的引用。     |
+| `<q>`          | 定义短的引用语。   |
+| `<cite>`       | 定义引用、引证。   |
+| `<dfn>`        | 定义一个定义项目。 |
+
+#### 文本格式化实例
+
+见text_ini.html
+

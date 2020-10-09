@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>文本格式化</h1>
+        <h2>此例演示如何在一个HTML文件中对文本进行格式化</h2>
+        <b>This text is bold</b>
+        <br />
+        <strong>This text is strong</strong>
+        <br />
+        <big>This is text is big</big>
+        <br />
+        <em>This text is emphasized</em>
+        <br />
+        <i>This text is italic</i>
+        <br />
+        <small>This text is small</small>
+        <br />
+        This text contains
+        <sub>subscript</sub>
+        <br />
+        This text contains
+        <sup>superscript</sup>
+
+        <h1>预格式文本</h1>
+        <h2>此例演示如何使用pre标签对空行和空格进行控制</h2>
+        <pre>
+        这是
+        预格式文本。
+        它保留了      空格
+        和换行。
+        </pre>
+        <p>pre 标签很适合显示计算机代码：</p> 
+        <pre>
+        for i = 1 to 10
+            print i
+        next i
+        </pre>
+
+        <h1>计算机输出标签</h1>
+        <h2>此例演示不同的“计算机输出”标签的显示效果。</h2>
+        <code>Computer code</code>
+        <br />
+        <kbd>Keyboard input</kbd>
+        <br />
+        <tt>Teletype text</tt>
+        <br />
+        <samp>Sample text</samp>
+        <br />
+        <var>Computer variable</var>
+        <br />
+
+        <h1>地址</h1>
+        <h2>此例演示如何在HTML文件中写地址</h2>
+        <address>
+            Written by <a href="mailto:webmaster@example.com">Donald Duck</a>.<br> 
+            Visit us at:<br>
+            Example.com<br>
+            Box 564, Disneyland<br>
+            USA
+        </address>
+
+        <h1>缩写和首字母缩写</h1>
+        <h2>此例演示如何实现缩写或首字母缩写</h2>
+        <abbr title="etcetera">etc.</abbr>
+        <br />
+        <acronym title="World Wide Web">WWW</acronym>
+        <p>在某些浏览器中，当您把鼠标移至缩略词语上时，title 可用于展示表达的完整版本。</p>
+        <p>仅对于 IE 5 中的 acronym 元素有效。</p>
+        <p>对于 Netscape 6.2 中的 abbr 和 acronym 元素都有效。</p>
+
+        <h1>文字方向</h1>
+        <h2>此例演示如何改变文字的方向</h2>
+        <p>
+            如果您的浏览器支持 bi-directional override (bdo)，下一行会从右向左输出 (rtl)；
+            </p>
+            
+        <bdo dir="rtl">
+        Here is some Hebrew text
+        </bdo>
+
+        <h1>块引用</h1>
+        <h2>此例演示如何实现长短不一的引用语</h2>
+        这是长的引用：
+        <blockquote>
+        这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。
+        </blockquote>
+        这是短的引用：
+        <q>
+        这是短的引用。
+        </q>
+        <p>
+        使用 blockquote 元素的话，浏览器会插入换行和外边距，而 q 元素不会有任何特殊的呈现。
+        </p>
+
+        <h1>删除字效果和插入字效果</h1>
+        <h2>此例盐水如何标记删除文本和插入文本</h2>
+        <p>一打有 <del>二十</del> <ins>十二</ins> 件。</p>
+        <p>大多数浏览器会改写为删除文本和下划线文本。</p>
+        <p>一些老式的浏览器会把删除文本和下划线文本显示为普通文本。</p>
+    </body>
+</html>
