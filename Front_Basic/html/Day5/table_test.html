@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <body>
+        <h2>这是最普通的表格</h2>
         <table>
             <tr>
               <td>row 1, cell 1</td>
@@ -11,7 +12,8 @@
               <td>row 2, cell 2</td>
             </tr>
         </table>
-
+      
+        <h2>这是一个有边框的表格</h2>
         <table border="1">
             <tr>
               <td>row 1, cell 1</td>
@@ -23,6 +25,7 @@
             </tr>
         </table>
 
+        <h2>这是一个有表头的表格</h2>
         <table border="1">
             <tr>
                 <th>Heading</th>
@@ -37,5 +40,29 @@
                 <td>row 2, cell 2</td>
             </tr>
         </table>
+      
+        <h2>这是有空单元格但不显示相应边框的表格</h2>
+        <table border="1">
+            <tr>
+                <td>row 1, cell 1</td>
+                <td>row 1, cell 2</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>row 2, cell 2</td>
+            </tr>
+        </table>
+
+        <h2>这是有空单元格且显示相应边框的表格</h2>
+        <table border="1">
+          <tr>
+              <td>row 1, cell 1</td>
+              <td>row 1, cell 2</td>
+          </tr>
+          <tr>
+              <td>&nbsp;</td>
+              <td>row 2, cell 2</td>
+          </tr>
+      </table>
     </body>
 </html>

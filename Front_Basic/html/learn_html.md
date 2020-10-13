@@ -906,5 +906,43 @@ URL指存储图像的位置。如果名为"boat.gif"的图像位于`www.w3school
 </table>
 ```
 
+<hr/>
 
+#### 空单元格
+
+在一些浏览器中，没有内容的表格单元显示得不太好。如果某个单元格是空的（没有内容），浏览器可能无法显示出这个单元格的边框。
+
+```html
+<table border="1">
+	<tr>
+		<td>row 1, cell 1</td>
+		<td>row 1, cell 2</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>row 2, cell 2</td>
+	</tr>
+</table>
+```
+
+**注意：**上面的空单元格的边框没有被显示出来。为了避免这种情况，在空单元格中添加一个空格占位符，就可以将边框显示出来。
+
+```html
+<table border="1">
+	<tr>
+		<td>row 1, cell 1</td>
+		<td>row 1, cell 2</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>row 2, cell 2</td>
+	</tr>
+</table>
+```
+
+<hr/>
+
+#### 实例
+
+见tablemore.html
 
