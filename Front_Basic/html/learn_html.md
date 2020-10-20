@@ -946,3 +946,240 @@ URL指存储图像的位置。如果名为"boat.gif"的图像位于`www.w3school
 
 见tablemore.html
 
+<hr/>
+
+## 06
+
+### HTML列表
+
+HTML支持有序、无序和定义列表
+
+#### 无序列表
+
+无序列表是一个项目的列表，此列项目使用粗体圆点进行标记。
+
+无序列表始于`<ul>`标签。每个列表项始于`<li>`。
+
+```html
+<ul>
+  <li>Coffee</li>
+  <li>Milk</li>
+</ul>
+```
+
+浏览器显示如下：
+
+- Coffee
+- Milk
+
+列表项内部可以使用段落、换行符、图片、链接以及其他列表等等。
+
+<hr/>
+
+#### 有序列表
+
+同样，有序列表也是一列项目，列表项目使用数字进行标记。
+
+有序列表始于`<ol>`标签。每个列表项始于`<li>`标签。
+
+```html
+<ol>
+  <li>Coffee</li>
+  <li>Milk</li>
+</ol>
+```
+
+浏览器会显示如下：
+
+1. Coffee
+2. Milk
+
+列表项内部可以使用段落、换行符、图片、链接以及其他列表等等。
+
+<hr/>
+
+#### 定义列表
+
+自定义列表不仅仅是一列项目，而是项目及其注释的组合。
+
+自定义列表以`<dl>`标签开始。每个自定义列表项以`<dt>`开始。每个自定义列表项的定义以`<dd>`开始。
+
+```html
+<dl>
+  <dt>Coffee</dt>
+  <dd>Black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>White cold drink</dd>
+</dl>
+```
+
+定义列表的列表项内部可以使用段落、换行符、图片、链接以及其他列表等等。
+
+<hr/>
+
+#### 实例
+
+见list_test.html
+
+<hr/>
+
+### HTML 的块
+
+可以通过`<div>`和`<span>`将HTML元素组合起来。
+
+#### HTML块元素
+
+大多数 HTML 元素被定义为块级元素或内联元素。
+
+>  **注释**：“块级元素”译为`block level element`，“内联元素”译为`inline element`。
+
+块级元素在浏览器显示时，通常会以新行来开始（和结束）。
+
+例子：`<h1>`, `<p>`,` <ul>`,` <table>`
+
+<hr/>
+
+#### HTML内联元素
+
+内联元素在显示时通常不会以新行开始。
+
+例子：`<b>`,` <td>`, `<a>`,` <img>`
+
+<hr/>
+
+#### HTML `<div>`元素
+
+HTML`<div>`元素是块级元素，它是可用于组合其他 HTML 元素的容器。
+
+<div> 元素没有特定的含义。除此之外，由于它属于块级元素，浏览器会在其前后显示折行。
+
+如果与 CSS 一同使用，`<div>`元素可用于对大的内容块设置样式属性。
+
+`<div>`元素的另一个常见的用途是文档布局。它取代了使用表格定义布局的老式方法。使用 `<table> `元素进行文档布局不是表格的正确用法。`<table> `元素的作用是显示表格化的数据。
+
+<hr/>
+
+#### HTML `<span>`元素
+
+HTML`<span>`元素是内联元素，可用作文本的容器。
+
+`<span>`元素也没有特定的含义。
+
+当与 CSS 一同使用时，`<span>`元素可用于为部分文本设置样式属性。
+
+<hr/>
+
+### HTML类
+
+对 HTML 进行分类（设置类），使我们能够为元素的类定义 CSS 样式。
+
+为相同的类设置相同的样式，或者为不同的类设置不同的样式。
+
+<iframe src="https://www.w3school.com.cn/demo/html_classes_london.asp" width="500" height="330" style="margin: 0px; padding: 0px; border: 0px;"></iframe>
+
+**实例**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.cities {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+} 
+</style>
+</head>
+
+<body>
+
+<div class="cities">
+<h2>London</h2>
+<p>
+London is the capital city of England. 
+It is the most populous city in the United Kingdom, 
+with a metropolitan area of over 13 million inhabitants.
+</p>
+</div> 
+
+</body>
+</html>
+```
+
+<hr/>
+
+#### 分类块级元素
+
+HTML` <div> `元素是*块级元素*。它能够用作其他 HTML 元素的容器。
+
+设置 `<div>` 元素的类，使我们能够为相同的 `<div>` 元素设置相同的类：
+
+<iframe src="https://www.w3school.com.cn/demo/html_classes_cities.asp" width="500" height="1020" style="margin: 0px; padding: 0px; border: 0px;"></iframe>
+
+**实例**
+
+```html
+<!doctype html>
+<html>
+<head>
+<style>
+.cities {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+} 
+</style>
+</head>
+
+<body>
+
+<div class="cities">
+<h2>London</h2>
+<p>London is the capital city of England. 
+It is the most populous city in the United Kingdom, 
+with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+
+<div class="cities">
+<h2>Paris</h2>
+<p>Paris is the capital and most populous city of France.</p>
+</div>
+
+<div class="cities">
+<h2>Tokyo</h2>
+<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+and the most populous metropolitan area in the world.</p>
+</div>
+
+</body>
+</html>
+```
+
+<hr/>
+
+#### 分类行内元素
+
+HTML`<span>`元素是行内元素，能够用作文本的容器。
+
+设置 `<span>`元素的类，能够为相同的` <span>`元素设置相同的样式。
+
+**实例**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  span.red {color:red;}
+</style>
+</head>
+<body>
+
+<h1>My <span class="red">Important</span> Heading</h1>
+
+</body>
+```
+
