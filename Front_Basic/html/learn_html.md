@@ -1183,3 +1183,335 @@ HTML`<span>`元素是行内元素，能够用作文本的容器。
 </body>
 ```
 
+## 07
+
+### HTML布局
+
+网站常常以多列显示内容（就像杂志和报纸）。
+
+<iframe src="https://www.w3school.com.cn/demo/html_layout_divs.asp" width="680" height="450" style="margin: 0px; padding: 0px; border: 0px;"></iframe>
+
+<hr/>
+
+#### 使用`<div>`元素
+
+**注释：**`<div>`元素常用作布局工具，因为能够轻松地通过`CSS`对其进行定位。
+
+上面那张图的例子使用了四个`<div>`元素来创建多列布局：
+
+```html
+<body>
+  <div id="header">
+    <h1>
+      City Gallery
+    </h1>
+  </div>
+  
+  <div id="nav">
+    London<br>
+    Paris<br>
+    Tokyo<br>
+  </div>
+  
+  <div id="section">
+    <h1>
+      London
+    </h1>
+    <p>
+      London is the capital city of England.It is the most populous city in the United Kingdom,with a metropolitan area of over 13 million inhabitants.
+    </p>
+    <p>
+      Standing on the River Thames,London has been a major settlement for two millennia,its history going back to its founding by the Romans,who named it Londinium.
+    </p>
+  </div>
+  
+  <div id="footer">
+    Copyright W3School.com.cn
+  </div>
+</body>
+```
+
+CSS:
+
+```html
+<style>
+  #header{
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+  }
+  #nav{
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;
+  }
+  #section{
+    width:350px;
+    float:left;
+    padding:10px;
+  }
+  #footer{
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+  }
+</style>
+```
+
+<hr/>
+
+#### 使用`HTML5`
+
+`HTML5`提供的新语义元素定义了网页的不同部分：
+
+**HTML5语义元素**
+
+| 元素      | 解释                             |
+| --------- | -------------------------------- |
+| `header`  | 定义文档或节的页眉               |
+| `nav`     | 定义导航链接的容器               |
+| `section` | 定义文档中的节                   |
+| `article` | 定义独立的自包含文章             |
+| `aside`   | 定义你内容之外的内容（比如侧栏） |
+| `footer`  | 定义文档或节的页脚               |
+| `details` | 定义额外的细节                   |
+| `summary` | 定义`details`元素的标题          |
+
+这个例子使用`<header>`,`<nav>`,`<section>`,以及`<footer>`来创建多列布局：
+
+**实例**
+
+```html
+<body>
+
+<header>
+<h1>City Gallery</h1>
+</header>
+
+<nav>
+London<br>
+Paris<br>
+Tokyo<br>
+</nav>
+
+<section>
+<h1>London</h1>
+<p>
+London is the capital city of England. It is the most populous city in the United Kingdom,
+with a metropolitan area of over 13 million inhabitants.
+</p>
+<p>
+Standing on the River Thames, London has been a major settlement for two millennia,
+its history going back to its founding by the Romans, who named it Londinium.
+</p>
+</section>
+
+<footer>
+Copyright W3School.com.cn
+</footer>
+
+</body>
+```
+
+CSS
+
+```html
+<style>
+header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px; 
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px; 
+}
+section {
+    width:350px;
+    float:left;
+    padding:10px; 
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
+</style>
+```
+
+<hr/>
+
+#### 使用表格
+
+**注释：**`<table>`元素不是作为布局工具而设计的。
+
+`<table>`元素的作用是显示表格化的数据。
+
+使用`<table>`元素能够取得布局效果，因为能够通过CSS设置表格元素的样式：
+
+```html
+<body>
+  <table class="lamp">
+    <tr>
+      <th>
+        <img src="" alt="Note" style="height:32px;width:32px">
+      </th>
+     	<td>
+        The table element was not designed to be a layout tool.
+      </td>
+    </tr>
+  </table>
+</body>
+```
+
+CSS
+
+```html
+<style>
+  table.lamp{
+    width:100%;
+    border:1px solid #d4d4d4;
+  }
+  table.lamp th,td{
+    padding:10px;
+  }
+  table.lamp td{
+    width:40px;
+  }
+</style>
+```
+
+### HTML响应式Web设计
+
+**什么是响应式Web设计？**
+
+- RWD指的是响应式Web设计（Responsive Web Design）
+- RWD能够以可变尺寸传递网页
+- RWD对于平板和移动设备是必需的
+
+<hr/>
+
+#### 创建
+
+创建响应式设计的一个方法，是自己来创建它：
+
+```html
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <style>
+      .city{
+        float:left;
+        margin:5px;
+        padding:15px;
+        width:300px;
+        height:300px;
+        border:1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      W3School Demo
+    </h1>
+    <h2>
+      Resize this responsive page!
+    </h2>
+    <br>
+    
+    <div class="city">
+      <h2>
+        London
+      </h2>
+      <p>
+        London is the capital city of England.
+      </p>
+      <p>
+        It is the most populous city in the United Kingdom,with a metropolitan area of over 13 million inhabitants.
+      </p>
+    </div>
+    
+    <div class="city">
+      <h2>
+        Paris
+      </h2>
+      <p>
+        Paris is the capital and most populous city of France.
+      </p>
+    </div>
+    
+    <div class="city">
+      <h2>
+        Tokyo
+      </h2>
+      <p>
+        Tokyo is the capital of Japan,the center of the Greater Tokyo Area,and the most populous metropolitan area in the world.
+      </p>
+    </div>
+  </body>
+</html>
+```
+
+<hr/>
+
+#### 使用Bootstrap
+
+另一个创建响应式设计的方法，是使用线程的CSS框架。
+
+Bootstrap是最流行的开发响应式web的HTML，CSS和JS框架。
+
+Bootstrap帮助您开发在任何尺寸都外观出众的站点：显示器、笔记本电脑、平板电脑或手机。
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>W3School Demo</h1> 
+        <p>Resize this responsive page!</p> 
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>London</h2>
+          <p>London is the capital city of England.</p>
+          <p>It is the most populous city in the United Kingdom,
+          with a metropolitan area of over 13 million inhabitants.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Paris</h2>
+          <p>Paris is the capital and most populous city of France.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Tokyo</h2>
+          <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+          and the most populous metropolitan area in the world.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+```
+
