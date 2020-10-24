@@ -1515,5 +1515,116 @@ Bootstrap帮助您开发在任何尺寸都外观出众的站点：显示器、�
 </html>
 ```
 
+<hr/>
+
 ## 08
+
+### HTML框架
+
+通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。
+
+#### 框架
+
+每份HTML文档称为一个框架，并且每个框架都独立于其他的框架。
+
+使用框架的坏处：
+
+- 开发人员必须同时跟踪更多的HTML文档
+- 很难打印整张页面
+
+<hr/>
+
+#### 结构标签
+
+**框架结构标签（`<frameset>`）**
+
+- 框架结构标签（`<frameset>`）定义如何将窗口分割为框架
+- 每个`frameset`定义了一系列行或列
+- `rows/columns`的值规定了每行或每列占据屏幕的面积
+
+<hr/>
+
+#### 框架标签
+
+**`<frame>`**
+
+Frame标签定义了放置在每个框架中的HTML文档。
+
+在下面的这个例子中，我们设置了一个两列的框架集。第一列被设置为占据浏览器窗口的25%。第二列被设置为占据浏览器窗口的75%。HTML文档"frame_a.htm"被置于第一个列中，而HTML文档"frame_b.htm"被置于第二个列中：
+
+```html
+<frameset cols="25%, 75%">
+  <frame src="frame_a.html">
+  <frame src="frame_b.html">
+</frameset>
+```
+
+<hr/>
+
+**基本的注意事项 - 有用的提示：**
+
+假如一个框架有可见边框，用户剋一拖动边框来改变它的大小。为了避免这种情况发生，可以在`<frame>`标签中加入：`noresize="noresize"`。
+
+为不支持框架的浏览器添加`<noframes>`标签，为了打印相应字段。
+
+**重要提示：**不能将`<body></body>`标签与`<frameset></frameset>`标签同时使用！不过，假如你添加包含一段文本的`<noframes>`标签，就必须将这段文字嵌套于`<body></body>`标签内。
+
+<hr/>
+
+**实例**
+
+见Day8源代码。
+
+<hr/>
+
+### HTML Iframe
+
+iframe用于在网页内显示网页。
+
+**iframe语法**
+
+```html
+<iframe src="URL"></iframe>
+```
+
+URL指向隔离页面的位置。
+
+<hr/>
+
+#### Iframe - 设置高度和宽度
+
+`height`和`width`属性用于规定`iframe`的高度和宽度。
+
+属性值的默认单位是像素，但也剋一用百分比来设定（比如“80%”）。
+
+```html
+<iframe src="frame_a.html" width="200" height="200"></iframe>
+```
+
+<hr/>
+
+#### Iframe - 删除边框
+
+`frameborder`属性规定是否显示`iframe`周围的边框。
+
+蛇追属性值为“0”就可以移除边框：
+
+```html
+<iframe src="frame_a.html" frameborder="0"></iframe>
+```
+
+<hr/>
+
+#### 使用iframe作为链接的目标
+
+iframe可用作链接的目标（target）。
+
+链接的target属性必须引用iframe的name属性。
+
+```html
+<iframe src="frame_a.html" name="iframe_a"></iframe>
+<p>
+  <a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a>
+</p>
+```
 
