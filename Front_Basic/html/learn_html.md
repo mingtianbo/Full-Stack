@@ -2270,7 +2270,7 @@ XHTML属性是以XML格式编写的HTML属性。
 
 ### HTML表单
 
-#### HTML表单
+#### 表单属性
 
 **HTML 表单用于搜集不同类型的用户输入。**
 
@@ -2363,7 +2363,7 @@ form elements
 **实例**
 
 ```html
-<form action="textfile">
+<form action="success.html">
 First name:<br>
 <input type="text" name="firstname" value="Mickey">
 <br>
@@ -2376,11 +2376,9 @@ Last name:<br>
 
 <hr/>
 
+**Action 属性**
 
-
-## Action 属性
-
-*action 属性*定义在提交表单时执行的动作。
+**action属性**定义在提交表单时执行的动作。
 
 向服务器提交表单的通常做法是使用提交按钮。
 
@@ -2388,58 +2386,66 @@ Last name:<br>
 
 在上面的例子中，指定了某个服务器脚本来处理被提交表单：
 
+```html
+<form action="success.html">
 ```
-<form action="action_page.php">
-```
 
-如果省略 action 属性，则 action 会被设置为当前页面。
+如果省略`action`属性，则`action`会被设置为当前页面。
 
-## Method 属性
+<hr/>
 
-*method 属性*规定在提交表单时所用的 HTTP 方法（*GET* 或 *POST*）：
+**Method 属性**
 
-```
-<form action="action_page.php" method="GET">
+**method属性**规定在提交表单时所用的 HTTP 方法（**GET** 或 **POST**）：
+
+```html
+<form action="success.html" method="GET">
 ```
 
 或：
 
-```
-<form action="action_page.php" method="POST">
+```html
+<form action="success.html" method="POST">
 ```
 
-## 何时使用 GET？
+<hr/>
 
-您能够使用 GET（默认方法）：
+**何时使用 GET？**
+
+您能够使用`GET`（默认方法）：
 
 如果表单提交是被动的（比如搜索引擎查询），并且没有敏感信息。
 
-当您使用 GET 时，表单数据在页面地址栏中是可见的：
+当您使用`GET`时，表单数据在页面地址栏中是可见的：
 
+```html
+success.html?firstname=Mickey&lastname=Mouse
 ```
-action_page.php?firstname=Mickey&lastname=Mouse
-```
 
-**注释：**GET 最适合少量数据的提交。浏览器会设定容量限制。
+**注释：`**GET` 最适合少量数据的提交。浏览器会设定容量限制。
 
-## 何时使用 POST？
+<hr/>
 
-您应该使用 POST：
+**何时使用 POST？**
+
+您应该使用`POST`：
 
 如果表单正在更新数据，或者包含敏感信息（例如密码）。
 
-POST 的安全性更加，因为在页面地址栏中被提交的数据是不可见的。
+`POST`的安全性更加，因为在页面地址栏中被提交的数据是不可见的。
 
-## Name 属性
+<hr/>
 
-如果要正确地被提交，每个输入字段必须设置一个 name 属性。
+**Name 属性**
 
-本例只会提交 "Last name" 输入字段：
+如果要正确地被提交，每个输入字段必须设置一个`name`属性。
 
-### 实例
+本例只会提交 "`Last name`" 输入字段：
 
-```
-<form action="action_page.php">
+**实例**
+
+```html
+<form action="success.html">
 First name:<br>
 <input type="text" value="Mickey">
 <br>
@@ -2450,18 +2456,18 @@ Last name:<br>
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_form_submit_id)
+<hr/>
 
-## 用 <fieldset> 组合表单数据
+**用 `<fieldset> `组合表单数据**
 
-*<fieldset>* 元素组合表单中的相关数据
+`<fieldset>` 元素组合表单中的相关数据
 
-*<legend>* 元素为 <fieldset> 元素定义标题。
+`<legend>` 元素为 `<fieldset>` 元素定义标题。
 
-### 实例
+**实例**
 
-```
-<form action="action_page.php">
+```html
+<form action="success.html">
 <fieldset>
 <legend>Personal information:</legend>
 First name:<br>
@@ -2474,26 +2480,16 @@ Last name:<br>
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_form_legend)
+<hr/>
 
-以上 HTML 代码在浏览器中看起来是这样的：
+**HTML Form 属性**
 
-Personal information:
-First name:
+HTML `<form>` 元素，已设置所有可能的属性，是这样的：
 
+**实例**
 
-Last name:
-
-
-
-## HTML Form 属性
-
-HTML <form> 元素，已设置所有可能的属性，是这样的：
-
-### 实例
-
-```
-<form action="action_page.php" method="GET" target="_blank" accept-charset="UTF-8"
+```html
+<form action="success.html" method="GET" target="_blank" accept-charset="UTF-8"
 ectype="application/x-www-form-urlencoded" autocomplete="off" novalidate>
 .
 form elements
@@ -2501,38 +2497,44 @@ form elements
 </form> 
 ```
 
-下面是 <form> 属性的列表：
+下面是`<form>`属性的列表：
 
-| 属性           | 描述                                                       |
-| :------------- | :--------------------------------------------------------- |
-| accept-charset | 规定在被提交表单中使用的字符集（默认：页面字符集）。       |
-| action         | 规定向何处提交表单的地址（URL）（提交页面）。              |
-| autocomplete   | 规定浏览器应该自动完成表单（默认：开启）。                 |
-| enctype        | 规定被提交数据的编码（默认：url-encoded）。                |
-| method         | 规定在提交表单时所用的 HTTP 方法（默认：GET）。            |
-| name           | 规定识别表单的名称（对于 DOM 使用：document.forms.name）。 |
-| novalidate     | 规定浏览器不验证表单。                                     |
-| target         | 规定 action 属性中地址的目标（默认：_self）。              |
+| 属性             | 描述                                                         |
+| :--------------- | :----------------------------------------------------------- |
+| `accept-charset` | 规定在被提交表单中使用的字符集（默认：页面字符集）。         |
+| `action`         | 规定向何处提交表单的地址（`URL`）（提交页面）。              |
+| `autocomplete`   | 规定浏览器应该自动完成表单（默认：开启）。                   |
+| `enctype`        | 规定被提交数据的编码（默认：`url-encoded`）。                |
+| `method`         | 规定在提交表单时所用的`HTTP`方法（默认：`GET`）。            |
+| `name`           | 规定识别表单的名称（对于`DOM`使用：`document.forms.name`）。 |
+| `novalidate`     | 规定浏览器不验证表单。                                       |
+| `target`         | 规定`action`属性中地址的目标（默认：`_self`）。              |
 
-**注释：**您将在下面的章节学到更多关于属性的知识。
+<hr/>
+
+#### 表单元素
 
 **本章描述所有 HTML 表单元素。**
 
-## <input> 元素
+<hr/>
 
-最重要的表单元素是 *<input>* 元素。
+**`<input>`元素**
 
-<input> 元素根据不同的 *type* 属性，可以变化为多种形态。
+最重要的表单元素是`<input>`元素。
+
+`<input>`元素根据不同的`type`属性，可以变化为多种形态。
 
 **注释：**下一章讲解所有 HTML 输入类型。
 
-## <select> 元素（下拉列表）
+<hr/>
 
-*<select>* 元素定义*下拉列表*：
+**下拉列表**
 
-### 实例
+`<select>`元素定义**下拉列表**：
 
-```
+**实例**
+
+```html
 <select name="cars">
 <option value="volvo">Volvo</option>
 <option value="saab">Saab</option>
@@ -2541,82 +2543,78 @@ form elements
 </select>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_elements_select)
-
-*<option>* 元素定义待选择的选项。
+`<option>`元素定义**待选择的选项**。
 
 列表通常会把首个选项显示为被选选项。
 
 您能够通过添加 selected 属性来定义预定义选项。
 
-### 实例
+**实例**
 
-```
+```html
 <option value="fiat" selected>Fiat</option>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_elements_select_pre)
+<hr/>
 
-## <textarea> 元素
+**`<textarea>`元素**
 
-*<textarea>* 元素定义多行输入字段（*文本域*）：
+`<textarea>`元素定义多行输入字段（**文本域**）：
 
-### 实例
+**实例**
 
-```
+```html
 <textarea name="message" rows="10" cols="30">
 The cat was playing in the garden.
 </textarea>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_headers)
-
 以上 HTML 代码在浏览器中显示为：
 
-```
+```html
 The cat was playing in the garden.
 ```
 
-## <button> 元素
+<hr/>
 
-*<button>* 元素定义可点击的*按钮*：
+**`<button> `元素**
 
-### 实例
+`<button>`元素定义可点击的**按钮**：
 
-```
+**实例**
+
+```html
 <button type="button" onclick="alert('Hello World!')">Click Me!</button>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_elements_button)
+<hr/>
 
-以上 HTML 代码在浏览器中显示为：
-
-Click Me!
-
-## HTML5 表单元素
+**HTML5 表单元素**
 
 HTML5 增加了如下表单元素：
 
-- <datalist>
-- <keygen>
-- <output>
+- `<datalist>`
+- `<keygen>`
+- `<output>`
 
 **注释：**默认地，浏览器不会显示未知元素。新元素不会破坏您的页面。
 
-## HTML5 <datalist> 元素
+<hr/>
 
-*<datalist>* 元素为 <input> 元素规定预定义选项列表。
+**HTML5 `<datalist>` 元素**
+
+`<datalist>` 元素为`<input>`元素规定预定义选项列表。
 
 用户会在他们输入数据时看到预定义选项的下拉列表。
 
-<input> 元素的 *list* 属性必须引用 <datalist> 元素的 *id* 属性。
+`<input>`元素的`list`属性必须引用`<datalist>`元素的`id`属性。
 
-### 实例
+**实例**
 
-通过 <datalist> 设置预定义值的 <input> 元素：
+通过`<datalist>`设置预定义值的`<input>`元素：
 
-```
-<form action="action_page.php">
+```html
+<form action="success.html">
 <input list="browsers">
 <datalist id="browsers">
    <option value="Internet Explorer">
@@ -2628,42 +2626,39 @@ HTML5 增加了如下表单元素：
 </form>
 ```
 
+<hr/>
+
 #### 输入类型
 
-**本章描述 <input> 元素的输入类型。**
+**本章描述`<input>`元素的输入类型。**
 
-## 输入类型：text
+<hr/>
 
-*<input type="text">* 定义供*文本输入*的单行输入字段：
+**输入类型：`text`**
 
-### 实例
+`<input type="text">`定义供*文本输入*的单行输入字段：
 
-```
+**实例**
+
+```html
 <form>
- First name:<br>
+First name:<br>
 <input type="text" name="firstname">
 <br>
- Last name:<br>
+Last name:<br>
 <input type="text" name="lastname">
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_text)
+<hr/>
 
-以上 HTML 代码在浏览器中看上去是这样的：
+**输入类型：`password`**
 
-First name:
+`<input type="password">`定义**密码字段**：
 
+**实例**
 
-Last name:
-
-## 输入类型：password
-
-*<input type="password">* 定义*密码字段*：
-
-### 实例
-
-```
+```html
 <form>
  User name:<br>
 <input type="text" name="username">
@@ -2673,29 +2668,22 @@ Last name:
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_password)
+>  **注释：**`password`字段中的字符会被做掩码处理（显示为星号或实心圆）。
 
-以上 HTML 代码在浏览器中看上去是这样的：
+<hr/>
 
-User name:
+**输入类型：`submit`**
 
+`<input type="submit">`定义**提交**表单数据至**表单处理程序**的按钮。
 
-User password:
+表单处理程序（`form-handler`）通常是包含处理输入数据的脚本的服务器页面。
 
-**注释：**password 字段中的字符会被做掩码处理（显示为星号或实心圆）。
+在表单的`action`属性中规定表单处理程序（`form-handler`）：
 
-## 输入类型：submit
+**实例**
 
-*<input type="submit">* 定义*提交*表单数据至*表单处理程序*的按钮。
-
-表单处理程序（form-handler）通常是包含处理输入数据的脚本的服务器页面。
-
-在表单的 action 属性中规定表单处理程序（form-handler）：
-
-### 实例
-
-```
-<form action="action_page.php">
+```html
+<form action="success.html">
 First name:<br>
 <input type="text" name="firstname" value="Mickey">
 <br>
@@ -2706,23 +2694,12 @@ Last name:<br>
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_submit)
+如果您省略了提交按钮的`value`属性，那么该按钮将获得默认文本：
 
-以上 HTML 代码在浏览器中看上去是这样的：
+**实例**
 
-First name:
-
-
-Last name:
-
-
-
-如果您省略了提交按钮的 value 属性，那么该按钮将获得默认文本：
-
-### 实例
-
-```
-<form action="action_page.php">
+```html
+<form action="success.html">
 First name:<br>
 <input type="text" name="firstname" value="Mickey">
 <br>
@@ -2733,17 +2710,17 @@ Last name:<br>
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_submit_nn)
+<hr/>
 
-## Input Type: radio
+**Input Type: radio**
 
-<input type="radio"> 定义单选按钮。
+`<input type="radio">`定义单选按钮。
 
 Radio buttons let a user select ONLY ONE of a limited number of choices:
 
-### 实例
+**实例**
 
-```
+```html
 <form>
 <input type="radio" name="sex" value="male" checked>Male
 <br>
@@ -2751,23 +2728,17 @@ Radio buttons let a user select ONLY ONE of a limited number of choices:
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_radio)
+<hr/>
 
-以上 HTML 代码在浏览器中看上去是这样的：
+**Input Type: checkbox**
 
-Male
-
-Female
-
-## Input Type: checkbox
-
-<input type="checkbox"> 定义复选框。
+`<input type="checkbox">`定义复选框。
 
 复选框允许用户在有限数量的选项中选择零个或多个选项。
 
-### 实例
+**实例**
 
-```
+```html
 <form>
 <input type="checkbox" name="vehicle" value="Bike">I have a bike
 <br>
@@ -2775,29 +2746,21 @@ Female
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_checkbox)
+<hr/>
 
-以上 HTML 代码在浏览器中看上去是这样的：
+**Input Type: button**
 
-I have a bike
+`<input type="button>`定义**按钮**。
 
-I have a car
+**实例**
 
-## Input Type: button
-
-*<input type="button>* 定义*按钮*。
-
-### 实例
-
-```
+```html
 <input type="button" onclick="alert('Hello World!')" value="Click Me!">
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_button)
+<hr/>
 
-以上 HTML 代码在浏览器中看上去是这样的：
-
-## HTML5 输入类型
+**HTML5 输入类型**
 
 HTML5 增加了多个新的输入类型：
 
@@ -2815,79 +2778,77 @@ HTML5 增加了多个新的输入类型：
 - url
 - week
 
-**注释：**老式 web 浏览器不支持的输入类型，会被视为输入类型 text。
+>  **注释：**老式 web 浏览器不支持的输入类型，会被视为输入类型 text。
 
-## 输入类型：number
+<hr/>
 
-*<input type="number">* 用于应该包含数字值的输入字段。
+**输入类型：number**
+
+`<input type="number">`用于应该包含数字值的输入字段。
 
 您能够对数字做出限制。
 
 根据浏览器支持，限制可应用到输入字段。
 
-### 实例
+*实例*
 
-```
+```html
 <form>
   Quantity (between 1 and 5):
   <input type="number" name="quantity" min="1" max="5">
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_number)
+<hr/>
 
-## 输入限制
+**输入限制**
 
 这里列出了一些常用的输入限制（其中一些是 HTML5 中新增的）：
 
-| 属性      | 描述                               |
-| :-------- | :--------------------------------- |
-| disabled  | 规定输入字段应该被禁用。           |
-| max       | 规定输入字段的最大值。             |
-| maxlength | 规定输入字段的最大字符数。         |
-| min       | 规定输入字段的最小值。             |
-| pattern   | 规定通过其检查输入值的正则表达式。 |
-| readonly  | 规定输入字段为只读（无法修改）。   |
-| required  | 规定输入字段是必需的（必需填写）。 |
-| size      | 规定输入字段的宽度（以字符计）。   |
-| step      | 规定输入字段的合法数字间隔。       |
-| value     | 规定输入字段的默认值。             |
+| 属性        | 描述                               |
+| :---------- | :--------------------------------- |
+| `disabled`  | 规定输入字段应该被禁用。           |
+| `max`       | 规定输入字段的最大值。             |
+| `maxlength` | 规定输入字段的最大字符数。         |
+| `min`       | 规定输入字段的最小值。             |
+| `pattern`   | 规定通过其检查输入值的正则表达式。 |
+| `readonly`  | 规定输入字段为只读（无法修改）。   |
+| `required`  | 规定输入字段是必需的（必需填写）。 |
+| `size`      | 规定输入字段的宽度（以字符计）。   |
+| `step`      | 规定输入字段的合法数字间隔。       |
+| `value`     | 规定输入字段的默认值。             |
 
-您将在下一章学到更多有关输入限制的知识。
+**实例**
 
-### 实例
-
-```
+```html
 <form>
   Quantity:
   <input type="number" name="points" min="0" max="100" step="10" value="30">
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_number_step)
+<hr/>
 
-## 输入类型：date
+**输入类型：date**
 
-*<input type="date">* 用于应该包含日期的输入字段。
+`<input type="date">`用于应该包含日期的输入字段。
 
 根据浏览器支持，日期选择器会出现输入字段中。
 
-### 实例
+**实例**
 
-```
+```html
 <form>
   Birthday:
   <input type="date" name="bday">
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_date)
-
 您可以向输入添加限制：
 
 ### 实例
 
-```
+```html
 <form>
   Enter a date before 1980-01-01:
   <input type="date" name="bday" max="1979-12-31"><br>
@@ -2896,61 +2857,59 @@ HTML5 增加了多个新的输入类型：
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_date_max_min)
+<hr/>
 
-## 输入类型：color
+**输入类型：color**
 
-*<input type="color">* 用于应该包含颜色的输入字段。
+`<input type="color">`用于应该包含颜色的输入字段。
 
 根据浏览器支持，颜色选择器会出现输入字段中。
 
-### 实例
+**实例**
 
-```
+```html
 <form>
   Select your favorite color:
   <input type="color" name="favcolor">
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_color)
+<hr/>
 
-## 输入类型：range
+**输入类型：range**
 
-*<input type="range">* 用于应该包含一定范围内的值的输入字段。
+`<input type="range">`用于应该包含一定范围内的值的输入字段。
 
 根据浏览器支持，输入字段能够显示为滑块控件。
 
-### 实例
+**实例**
 
-```
+```html
 <form>
   <input type="range" name="points" min="0" max="10">
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_range)
+您能够使用如下属性来规定限制：`min`、`max`、`step`、`value`。
 
-您能够使用如下属性来规定限制：min、max、step、value。
+**输入类型：month**
 
-## 输入类型：month
-
-*<input type="month">* 允许用户选择月份和年份。
+`<input type="month">`允许用户选择月份和年份。
 
 根据浏览器支持，日期选择器会出现输入字段中。
 
-### 实例
+**实例**
 
-```
+```html
 <form>
   Birthday (month and year):
   <input type="month" name="bdaymonth">
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_month)
+<hr/>
 
-## 输入类型：week
+**输入类型：week**
 
 *<input type="week">* 允许用户选择周和年。
 
