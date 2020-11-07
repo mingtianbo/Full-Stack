@@ -2790,7 +2790,7 @@ HTML5 增加了多个新的输入类型：
 
 根据浏览器支持，限制可应用到输入字段。
 
-*实例*
+**实例**
 
 ```html
 <form>
@@ -2846,7 +2846,7 @@ HTML5 增加了多个新的输入类型：
 
 您可以向输入添加限制：
 
-### 实例
+**实例**
 
 ```html
 <form>
@@ -2892,6 +2892,8 @@ HTML5 增加了多个新的输入类型：
 
 您能够使用如下属性来规定限制：`min`、`max`、`step`、`value`。
 
+<hr/>
+
 **输入类型：month**
 
 `<input type="month">`允许用户选择月份和年份。
@@ -2911,149 +2913,151 @@ HTML5 增加了多个新的输入类型：
 
 **输入类型：week**
 
-*<input type="week">* 允许用户选择周和年。
+`<input type="week">`允许用户选择周和年。
 
 根据浏览器支持，日期选择器会出现输入字段中。
 
-### 实例
+**实例**
 
-```
+```html
 <form>
   Select a week:
   <input type="week" name="week_year">
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_week)
+<hr/>
 
-## 输入类型：time
+**输入类型：time**
 
-*<input type="time">* 允许用户选择时间（无时区）。
+`<input type="time">`允许用户选择时间（无时区）。
 
 根据浏览器支持，时间选择器会出现输入字段中。
 
-### 实例
+**实例**
 
-```
+```html
 <form>
   Select a time:
   <input type="time" name="usr_time">
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_time)
+<hr/>
 
-## 输入类型：datetime
+**输入类型：datetime**
 
-*<input type="datetime">* 允许用户选择日期和时间（有时区）。
+`<input type="datetime">`允许用户选择日期和时间（有时区）。
 
 根据浏览器支持，日期选择器会出现输入字段中。
 
-### 实例
+**实例**
 
-```
+```html
 <form>
   Birthday (date and time):
   <input type="datetime" name="bdaytime">
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_datetime)
+<hr/>
 
-## 输入类型：datetime-local
+**输入类型：datetime-local**
 
-*<input type="datetime-local">* 允许用户选择日期和时间（无时区）。
+`<input type="datetime-local">`允许用户选择日期和时间（无时区）。
 
 根据浏览器支持，日期选择器会出现输入字段中。
 
-### 实例
+**实例**
 
-```
+```html
 <form>
   Birthday (date and time):
   <input type="datetime-local" name="bdaytime">
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_datetime-local)
+<hr/>
 
-## 输入类型：email
+**输入类型：email**
 
-*<input type="email">* 用于应该包含电子邮件地址的输入字段。
+`<input type="email">`用于应该包含电子邮件地址的输入字段。
 
 根据浏览器支持，能够在被提交时自动对电子邮件地址进行验证。
 
-某些智能手机会识别 email 类型，并在键盘增加 ".com" 以匹配电子邮件输入。
+某些智能手机会识别`email`类型，并在键盘增加`.com`以匹配电子邮件输入。
 
-### 实例
+**实例**
 
-```
+```html
 <form>
   E-mail:
   <input type="email" name="email">
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_email)
+<hr/>
 
-## 输入类型：search
+**输入类型：search**
 
-*<input type="search">* 用于搜索字段（搜索字段的表现类似常规文本字段）。
+`<input type="search">`用于搜索字段（搜索字段的表现类似常规文本字段）。
 
-### 实例
+**实例**
 
-```
+```html
 <form>
   Search Google:
   <input type="search" name="googlesearch">
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_search)
+<hr/>
 
-## 输入类型：tel
+**输入类型：tel**
 
-*<input type="tel">* 用于应该包含电话号码的输入字段。
+`<input type="tel">`用于应该包含电话号码的输入字段。
 
-目前只有 Safari 8 支持 tel 类型。
+目前只有`Safari 8`支持`tel`类型。
 
-### 实例
+**实例**
 
-```
+```html
 <form>
   Telephone:
   <input type="tel" name="usrtel">
 </form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_tel)
+<hr/>
 
-## 输入类型：url
+**输入类型：url**
 
-*<input type="url">* 用于应该包含 URL 地址的输入字段。
+`<input type="url">`用于应该包含`URL`地址的输入字段。
 
-根据浏览器支持，在提交时能够自动验证 url 字段。
+根据浏览器支持，在提交时能够自动验证`url`字段。
 
-某些智能手机识别 url 类型，并向键盘添加 ".com" 以匹配 url 输入。
+某些智能手机识别`url`类型，并向键盘添加 `.com`以匹配`url`输入。
 
-### 实例
+**实例**
 
-```
+```html
 <form>
   Add your homepage:
   <input type="url" name="homepage">
 </form>
 ```
 
+<hr/>
+
 #### 输入属性
 
-## value 属性
+**value 属性**
 
-*value* 属性规定输入字段的初始值：
+`value`属性规定输入字段的初始值：
 
-### 实例
+**实例**
 
-```
+```html
 <form action="">
  First name:<br>
 <input type="text" name="firstname" value="John">
@@ -3063,15 +3067,15 @@ HTML5 增加了多个新的输入类型：
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_attributes_value)
+<hr/>
 
-## readonly 属性
+**readonly 属性**
 
-*readonly* 属性规定输入字段为只读（不能修改）：
+`readonly`属性规定输入字段为只读（不能修改）：
 
-### 实例
+**实例**
 
-```
+```html
 <form action="">
  First name:<br>
 <input type="text" name="firstname" value="John" readonly>
@@ -3081,21 +3085,21 @@ HTML5 增加了多个新的输入类型：
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_attributes_readonly)
+`readonly `属性不需要值。它等同于 `readonly="readonly"`。
 
-readonly 属性不需要值。它等同于 readonly="readonly"。
+<hr/>
 
-## disabled 属性
+**disabled 属性**
 
-*disabled* 属性规定输入字段是禁用的。
+`disabled`属性规定输入字段是禁用的。
 
 被禁用的元素是不可用和不可点击的。
 
 被禁用的元素不会被提交。
 
-### 实例
+**实例**
 
-```
+```html
 <form action="">
  First name:<br>
 <input type="text" name="firstname" value="John" disabled>
@@ -3105,17 +3109,17 @@ readonly 属性不需要值。它等同于 readonly="readonly"。
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_attributes_disabled)
+`disabled `属性不需要值。它等同于 `disabled="disabled"`。
 
-disabled 属性不需要值。它等同于 disabled="disabled"。
+<hr/>
 
-## size 属性
+**size 属性**
 
-*size* 属性规定输入字段的尺寸（以字符计）：
+`size`属性规定输入字段的尺寸（以字符计）：
 
-### 实例
+**实例**
 
-```
+```html
 <form action="">
  First name:<br>
 <input type="text" name="firstname" value="John" size="40">
@@ -3125,35 +3129,35 @@ disabled 属性不需要值。它等同于 disabled="disabled"。
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_attributes_size)
+<hr/>
 
-## maxlength 属性
+**maxlength 属性**
 
-*maxlength* 属性规定输入字段允许的最大长度：
+`maxlength`属性规定输入字段允许的最大长度：
 
-### 实例
+**实例**
 
-```
+```html
 <form action="">
  First name:<br>
 <input type="text" name="firstname" maxlength="10">
 <br>
  Last name:<br>
 <input type="text" name="lastname">
-</form> 
+</form>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html_input_attributes_maxlength)
+如设置`maxlength`属性，则输入控件不会接受超过所允许数的字符。
 
-如设置 maxlength 属性，则输入控件不会接受超过所允许数的字符。
+该属性不会提供任何反馈。如果需要提醒用户，则必须编写`JavaScript`代码。
 
-该属性不会提供任何反馈。如果需要提醒用户，则必须编写 JavaScript 代码。
+>  **注释：**输入限制并非万无一失。`JavaScript`提供了很多方法来增加非法输入。如需安全地限制输入，则接受者（服务器）必须同时对限制进行检查。
 
-**注释：**输入限制并非万无一失。JavaScript 提供了很多方法来增加非法输入。如需安全地限制输入，则接受者（服务器）必须同时对限制进行检查。
+<hr/>
 
-## HTML5 属性
+**HTML5 属性**
 
-HTML5 为 <input> 增加了如下属性：
+HTML5 为`<input>`增加了如下属性：
 
 - autocomplete
 - autofocus
@@ -3172,27 +3176,29 @@ HTML5 为 <input> 增加了如下属性：
 - required
 - step
 
-并为 <form> 增加如需属性：
+并为`<form>`增加如下属性：
 
 - autocomplete
 - novalidate
 
-## autocomplete 属性
+<hr/>
 
-autocomplete 属性规定表单或输入字段是否应该自动完成。
+**autocomplete 属性**
+
+`autocomplete`属性规定表单或输入字段是否应该自动完成。
 
 当自动完成开启，浏览器会基于用户之前的输入值自动填写值。
 
-**提示：**您可以把表单的 autocomplete 设置为 on，同时把特定的输入字段设置为 off，反之亦然。
+> **提示：**您可以把表单的`autocomplete`设置为`on`，同时把特定的输入字段设置为`off`，反之亦然。
 
-autocomplete 属性适用于 <form> 以及如下 <input> 类型：text、search、url、tel、email、password、datepickers、range 以及 color。
+`autocomplete`属性适用于`<form>`以及如下`<input>`类型：`text`、`search`、`url`、`tel`、`email`、`password`、`datepickers`、`range`以及`color`。
 
-### 实例
+**实例**
 
-自动完成开启的 HTML 表单（某个输入字段为 off）：
+自动完成开启的`HTML`表单（某个输入字段为`off`）：
 
-```
-<form action="action_page.php" autocomplete="on">
+```html
+<form action="success.html" autocomplete="on">
    First name:<input type="text" name="fname"><br>
    Last name: <input type="text" name="lname"><br>
    E-mail: <input type="email" name="email" autocomplete="off"><br>
@@ -3200,57 +3206,57 @@ autocomplete 属性适用于 <form> 以及如下 <input> 类型：text、search�
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_autocomplete)
+>  **提示：**在某些浏览器中，您也许需要手动启用自动完成功能。
 
-**提示：**在某些浏览器中，您也许需要手动启用自动完成功能。
+<hr/>
 
-## novalidate 属性
+**novalidate 属性**
 
-novalidate 属性属于 <form> 属性。
+`novalidate`属性属` <form>`属性。
 
-如果设置，则 novalidate 规定在提交表单时不对表单数据进行验证。
+如果设置，则`novalidate`规定在提交表单时不对表单数据进行验证。
 
-### 实例
+**实例**
 
 指示表单在被提交时不进行验证：
 
-```
-<form action="action_page.php" novalidate>
+```html
+<form action="success.html" novalidate>
    E-mail: <input type="email" name="user_email">
    <input type="submit">
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_form_novalidate)
+<hr/>
 
-## autofocus 属性
+**autofocus 属性**
 
-autofocus 属性是布尔属性。
+`autofocus`属性是布尔属性。
 
-如果设置，则规定当页面加载时 <input> 元素应该自动获得焦点。
+如果设置，则规定当页面加载时`<input>`元素应该自动获得焦点。
 
-### 实例
+**实例**
 
-使 "First name" 输入字段在页面加载时自动获得焦点：
+使`First name`输入字段在页面加载时自动获得焦点：
 
-```
+```html
 First name:<input type="text" name="fname" autofocus>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_autofocus)
+<hr/>
 
-## form 属性
+**form 属性**
 
-form 属性规定 <input> 元素所属的一个或多个表单。
+`form`属性规定`<input>`元素所属的一个或多个表单。
 
-**提示：**如需引用一个以上的表单，请使用空格分隔的表单 id 列表。
+> **提示：**如需引用一个以上的表单，请使用空格分隔的表单`id`列表。
 
-### 实例
+**实例**
 
 输入字段位于 HTML 表单之外（但仍属表单）：
 
-```
-<form action="action_page.php" id="form1">
+```html
+<form action="success.html" id="form1">
    First name: <input type="text" name="fname"><br>
    <input type="submit" value="Submit">
 </form>
@@ -3258,22 +3264,22 @@ form 属性规定 <input> 元素所属的一个或多个表单。
  Last name: <input type="text" name="lname" form="form1">
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_form)
+<hr/>
 
-## formaction 属性
+**formaction 属性**
 
-formaction 属性规定当提交表单时处理该输入控件的文件的 URL。
+`formaction`属性规定当提交表单时处理该输入控件的文件的`URL`。
 
-formaction 属性覆盖 <form> 元素的 action 属性。
+`formaction`属性覆盖`<form>`元素的`action`属性。
 
-formaction 属性适用于 type="submit" 以及 type="image"。
+`formaction`属性适用于`type="submit" `以及 `type="image"`。
 
-### 实例
+**实例**
 
 拥有两个两个提交按钮并对于不同动作的 HTML 表单：
 
-```
-<form action="action_page.php">
+```html
+<form action="success.html">
    First name: <input type="text" name="fname"><br>
    Last name: <input type="text" name="lname"><br>
    <input type="submit" value="Submit"><br>
@@ -3282,22 +3288,22 @@ formaction 属性适用于 type="submit" 以及 type="image"。
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_formaction)
+<hr/>
 
-## formenctype 属性
+**formenctype 属性**
 
-formenctype 属性规定当把表单数据（form-data）提交至服务器时如何对其进行编码（仅针对 method="post" 的表单）。
+`formenctype`属性规定当把表单数据（`form-data`）提交至服务器时如何对其进行编码（仅针对`method="post" `的表单）。
 
-formenctype 属性覆盖 <form> 元素的 enctype 属性。
+`formenctype `属性覆盖 `<form> `元素的 `enctype` 属性。
 
-formenctype 属性适用于 type="submit" 以及 type="image"。
+`formenctype `属性适用于` type="submit" `以及` type="image"`。
 
-### 实例
+**实例**
 
-发送默认编码以及编码为 "multipart/form-data"（第二个提交按钮）的表单数据（form-data）：
+发送默认编码以及编码为` "multipart/form-data"`（第二个提交按钮）的表单数据（`form-data`）：
 
-```
-<form action="demo_post_enctype.asp" method="post">
+```html
+<form action="success.html" method="post">
    First name: <input type="text" name="fname"><br>
    <input type="submit" value="Submit">
    <input type="submit" formenctype="multipart/form-data"
@@ -3305,22 +3311,22 @@ formenctype 属性适用于 type="submit" 以及 type="image"。
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_formenctype)
+<hr/>
 
-## formmethod 属性
+**formmethod 属性**
 
-formmethod 属性定义用以向 action URL 发送表单数据（form-data）的 HTTP 方法。
+`formmethod`属性定义用以向 `action URL` 发送表单数据（`form-data`）的 `HTTP` 方法。
 
-formmethod 属性覆盖 <form> 元素的 method 属性。
+`formmethod` 属性覆盖 `<form> `元素的 `method` 属性。
 
-formmethod 属性适用于 type="submit" 以及 type="image"。
+`formmethod `属性适用于 `type="submit" `以及` type="image"`。
 
-### 实例
+**实例**
 
 第二个提交按钮覆盖表单的 HTTP 方法：
 
-```
-<form action="action_page.php" method="get">
+```html
+<form action="success.html" method="get">
    First name: <input type="text" name="fname"><br>
    Last name: <input type="text" name="lname"><br>
    <input type="submit" value="Submit">
@@ -3329,46 +3335,46 @@ formmethod 属性适用于 type="submit" 以及 type="image"。
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_formmethod)
+<hr/>
 
-## formnovalidate 属性
+**formnovalidate 属性**
 
-novalidate 属性是布尔属性。
+`novalidate `属性是布尔属性。
 
-如果设置，则规定在提交表单时不对 <input> 元素进行验证。
+如果设置，则规定在提交表单时不对` <input>` 元素进行验证。
 
-formnovalidate 属性覆盖 <form> 元素的 novalidate 属性。
+`formnovalidate `属性覆盖 `<form> `元素的 `novalidate` 属性。
 
-formnovalidate 属性可用于 type="submit"。
+`formnovalidate` 属性可用于 `type="submit"`。
 
-### 实例
+**实例**
 
 拥有两个提交按钮的表单（验证和不验证）：
 
-```
-<form action="action_page.php">
+```html
+<form action="success.html">
    E-mail: <input type="email" name="userid"><br>
    <input type="submit" value="Submit"><br>
    <input type="submit" formnovalidate value="Submit without validation">
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_formnovalidate)
+<hr/>
 
-## formtarget 属性
+**formtarget 属性**
 
-formtarget 属性规定的名称或关键词指示提交表单后在何处显示接收到的响应。
+`formtarget `属性规定的名称或关键词指示提交表单后在何处显示接收到的响应。
 
-formtarget 属性会覆盖 <form> 元素的 target 属性。
+`formtarget `属性会覆盖 `<form> `元素的` target `属性。
 
-formtarget 属性可与 type="submit" 和 type="image" 使用。
+`formtarget `属性可与 `type="submit" `和` type="image"` 使用。
 
-### 实例
+**实例**
 
 这个表单有两个提交按钮，对应不同的目标窗口：
 
-```
-<form action="action_page.php">
+```html
+<form action="success.html">
    First name: <input type="text" name="fname"><br>
    Last name: <input type="text" name="lname"><br>
    <input type="submit" value="Submit as normal">
@@ -3377,35 +3383,35 @@ formtarget 属性可与 type="submit" 和 type="image" 使用。
 </form> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_formtarget)
+<hr/>
 
-## height 和 width 属性
+**height 和 width 属性**
 
-height 和 width 属性规定 <input> 元素的高度和宽度。
+`height` 和 `width `属性规定` <input> `元素的高度和宽度。
 
-height 和 width 属性仅用于 <input type="image">。
+`height` 和` width `属性仅用于 `<input type="image">`。
 
-**注释：**请始终规定图像的尺寸。如果浏览器不清楚图像尺寸，则页面会在图像加载时闪烁。
+> **注释：**请始终规定图像的尺寸。如果浏览器不清楚图像尺寸，则页面会在图像加载时闪烁。
 
-### 实例
+**实例**
 
 把图像定义为提交按钮，并设置 height 和 width 属性：
 
-```
+```html
 <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_height_width)
+<hr/>
 
-## list 属性
+**list 属性**
 
-list 属性引用的 <datalist> 元素中包含了 <input> 元素的预定义选项。
+`list `属性引用的 `<datalist> `元素中包含了` <input>` 元素的预定义选项。
 
-### 实例
+**实例**
 
-使用 <datalist> 设置预定义值的 <input> 元素：
+使用` <datalist> `设置预定义值的 `<input> `元素：
 
-```
+```html
 <input list="browsers">
 
 <datalist id="browsers">
@@ -3417,19 +3423,19 @@ list 属性引用的 <datalist> 元素中包含了 <input> 元素的预定义选
 </datalist> 
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_datalist)
+<hr/>
 
-## min 和 max 属性
+**min 和 max 属性**
 
-min 和 max 属性规定 <input> 元素的最小值和最大值。
+`min` 和` max `属性规定` <input>` 元素的最小值和最大值。
 
-min 和 max 属性适用于如需输入类型：number、range、date、datetime、datetime-local、month、time 以及 week。
+`min` 和 `max `属性适用于如需输入类型：`number`、`range`、`date`、`datetime`、`datetime-local`、`month`、`time` 以及` week`。
 
-### 实例
+**实例**
 
-具有最小和最大值的 <input> 元素：
+具有最小和最大值的 `<input>` 元素：
 
-```
+```html
 Enter a date before 1980-01-01:
 <input type="date" name="bday" max="1979-12-31">
 
@@ -3440,98 +3446,98 @@ Enter a date before 1980-01-01:
 <input type="number" name="quantity" min="1" max="5">
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_max_min)
+<hr/>
 
-## multiple 属性
+**multiple 属性**
 
-multiple 属性是布尔属性。
+`multiple `属性是布尔属性。
 
-如果设置，则规定允许用户在 <input> 元素中输入一个以上的值。
+如果设置，则规定允许用户在` <input>` 元素中输入一个以上的值。
 
-multiple 属性适用于以下输入类型：email 和 file。
+`multiple` 属性适用于以下输入类型：`email `和` file`。
 
-### 实例
+**实例**
 
 接受多个值的文件上传字段：
 
-```
+```html
 Select images: <input type="file" name="img" multiple>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_multiple)
+<hr/>
 
-## pattern 属性
+**pattern 属性**
 
-pattern 属性规定用于检查 <input> 元素值的正则表达式。
+`pattern `属性规定用于检查` <input> `元素值的正则表达式。
 
-pattern 属性适用于以下输入类型：text、search、url、tel、email、and password。
+`pattern `属性适用于以下输入类型：`text`、`search`、`url`、`tel`、`email`、`and password`。
 
-**提示：**请使用全局的 title 属性对模式进行描述以帮助用户。
+> **提示：**请使用全局的` title `属性对模式进行描述以帮助用户。
 
-**提示：**请在我们的 JavaScript 教程中学习更多有关正则表达式的知识。
+> **提示：**请在我们的 `JavaScript` 教程中学习更多有关正则表达式的知识。
 
-### 实例
+**实例**
 
 只能包含三个字母的输入字段（无数字或特殊字符）：
 
-```
+```html
 Country code: 
 <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_pattern)
+<hr/>
 
-## placeholder 属性
+**placeholder 属性**
 
-placeholder 属性规定用以描述输入字段预期值的提示（样本值或有关格式的简短描述）。
+`placeholder `属性规定用以描述输入字段预期值的提示（样本值或有关格式的简短描述）。
 
 该提示会在用户输入值之前显示在输入字段中。
 
-placeholder 属性适用于以下输入类型：text、search、url、tel、email 以及 password。
+`placeholder `属性适用于以下输入类型：`text`、`search`、`url`、`tel`、`email` 以及 `password`。
 
-### 实例
+**实例**
 
 拥有占位符文本的输入字段：
 
-```
+```html
 <input type="text" name="fname" placeholder="First name">
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_placeholder)
+<hr/>
 
-## required 属性
+**required 属性**
 
-required 属性是布尔属性。
+`required `属性是布尔属性。
 
 如果设置，则规定在提交表单之前必须填写输入字段。
 
-required 属性适用于以下输入类型：text、search、url、tel、email、password、date pickers、number、checkbox、radio、and file.
+`required `属性适用于以下输入类型：`text`、`search`、`url`、`tel`、`email`、`password`、`date pickers`、`number`、`checkbox`、`radio`、`and file`.
 
-### 实例
+**实例**
 
 必填的输入字段：
 
-```
+```html
 Username: <input type="text" name="usrname" required>
 ```
 
-[亲自试一试](https://www.w3school.com.cn/tiy/t.asp?f=html5_input_required)
+<hr/>
 
-## step 属性
+**step 属性**
 
-step 属性规定 <input> 元素的合法数字间隔。
+`step `属性规定` <input> `元素的合法数字间隔。
 
-示例：如果 step="3"，则合法数字应该是 -3、0、3、6、等等。
+示例：如果` step="3"`，则合法数字应该是` -3`、`0`、`3`、`6`等等。
 
-**提示：**step 属性可与 max 以及 min 属性一同使用，来创建合法值的范围。
+**提示：**`step` 属性可与` max` 以及 `min` 属性一同使用，来创建合法值的范围。
 
-step 属性适用于以下输入类型：number、range、date、datetime、datetime-local、month、time 以及 week。
+`step` 属性适用于以下输入类型：`number`、`range`、`date`、`datetime`、`datetime-local`、`month`、`time` 以及` week`。
 
-### 示例
+**示例**
 
 拥有具体的合法数字间隔的输入字段：
 
-```
+```html
 <input type="number" name="points" step="3">
 ```
 
