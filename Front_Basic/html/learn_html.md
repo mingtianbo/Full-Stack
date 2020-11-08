@@ -3541,3 +3541,21 @@ Username: <input type="text" name="usrname" required>
 <input type="number" name="points" step="3">
 ```
 
+<hr/>
+
+## 12
+
+### HTML 媒体
+
+Web上的多媒体指的是音效、音乐、视频和动画。
+
+现在网络浏览器已支持很多多媒体格式。
+
+<hr/>
+
+#### HTML Object元素
+
+`<object>`的作用是支持HTML助手（插件）。
+
+**HTML助手（插件）**
+
