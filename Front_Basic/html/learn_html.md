@@ -3559,3 +3559,86 @@ Web上的多媒体指的是音效、音乐、视频和动画。
 
 **HTML助手（插件）**
 
+辅助应用程序（`helper application`）是可由浏览器启动的程序。辅助应用程序也称为插件。
+
+辅助程序可用于播放音频和视频（以及其他）。辅助程序是使用`<object>`标签来加载的。
+
+使用辅助程序播放视频和音频的一个优势是，您能够允许用户来控制部分或全部播放设置。
+
+大多数辅助应用程序允许对音量设置和播放功能（比如后退、暂停、停止和播放）的手工（或程序的）控制。
+
+<hr/>
+
+#### 使用`QuickTime`来播放`Wave`音频
+
+```html
+<object width="420" height="360" 
+classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+  <param name="src" value="bird.wav" />
+  <param name="controller" value="true" />
+</object>
+```
+
+<hr/>
+
+#### 使用`QuickTime`来播放`MP4`视频
+
+```html
+<object width="420" height="360"
+classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
+codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+  <param name="src" value="movie.mp4" />
+  <param name="controller" value="true" />
+</object>
+```
+
+<hr/>
+
+#### 使用`Flash`来播放`SWF`视频
+
+```html
+<object width="400" height="40"
+classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+codebase="http://fpdownload.macromedia.com/
+pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
+  <param name="SRC" value="bookmark.swf">
+  <embed src="bookmark.swf" width="400" height="40"></embed>
+</object>
+```
+
+<hr/>
+
+#### 使用`Windows Media Player`来播放`WMV`影片
+
+```html
+<object width="100%" height="100%"
+type="video/x-ms-asf" url="3d.wmv" data="3d.wmv"
+classid="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6">
+  <param name="url" value="3d.wmv">
+  <param name="filename" value="3d.wmv">
+  <param name="autostart" value="1">
+  <param name="uiMode" value="full" />
+  <param name="autosize" value="1">
+  <param name="playcount" value="1">
+  <embed type="application/x-mplayer2" src="3d.wmv" width="100%"
+   height="100%" autostart="true" showcontrols="true" 
+  pluginspage="http://www.microsoft.com/Windows/MediaPlayer/"></embed>
+</object>
+```
+
+<hr/>
+
+### 音频
+
+`<audio>`
+
+`<embed>`
+
+### 视频
+
+`<video>`
+
+`<embed>`
+
+> **说明**：这些现在都不广泛使用，在之后学习css和js中再详细学习。
+
