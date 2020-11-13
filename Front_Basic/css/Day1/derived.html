@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            li strong{
+                font-style:italic;
+                font-weight: normal;
+            }
+            strong{
+                color:red;
+            }
+            h2{
+                color:red;
+            }
+            h2 strong{
+                color:blue;
+            }
+        </style>
+    </head>
+    <body>
+        <p><strong>我是粗体字，不是斜体字，因为我不在列表当中，所以这个规则对我不起作用</strong></p>
+        
+        <ol>
+            <li><strong>我是斜体字。这是因为strong元素位于li元素内。</strong></li>
+            <li>我是正常的字体。</li>
+        </ol>
+
+        <p>The strongly emphasized word in this paragraph is <strong>red</strong>.</p>
+        <h2>This subhead is also red.</h2>
+        <h2>The strongly emphasized word in this subhead is <strong>blue</strong>.</h2>
+    </body>
+</html>

@@ -611,7 +611,7 @@ font-size: 20pt;
 </html>
 ```
 
-
+<hr/>
 
 
 
@@ -619,3 +619,63 @@ font-size: 20pt;
 
 ### 容器
 
+用于将元素的宽度固定到当前断点的组件。
+
+<table>
+  <tr>
+    <td>类</td>
+    <td>断点</td>
+    <td>属性</td>
+  </tr>
+  <tr>
+    <td rowspan="5">.container</td>
+    <td>None</td>
+    <td>width:100%</td>
+  </tr>
+  <tr>
+    <td>sm(640px)</td>
+    <td>max-width:640px;</td>
+  </tr>
+  <tr>
+    <td>md(768px)</td>
+    <td>max-width:768px;</td>
+  </tr>
+  <tr>
+    <td>lg(1024px)</td>
+    <td>max-width:1024px;</td>
+  </tr>
+  <tr>
+    <td>xl(1280px)</td>
+    <td>max-width:1280px;</td>
+  </tr>
+</table>
+
+<hr/>
+
+#### 用法
+
+`.container`类将元素的`max-width`与当前断点的`min-width`进行匹配。如果希望设计一组固定的屏幕尺寸，而不是一个可变尺寸的窗口，这将很有用。
+
+请注意，与其他框架中的容器不同，Tailwind的容器**不会自动居中**，**也没有任何内置的水平填充**。
+
+要使容器居中，请使用`.mx-auto`实用程序：
+
+```html
+<div class="container mx-auto">
+  <!-- ... -->
+</div>
+```
+
+要添加水平填充，请使用`.px-{size}`实用程序：
+
+```html
+<div class="container mx-auto px-4">
+  <!-- ... -->
+</div>
+```
+
+<hr/>
+
+#### 响应式
+
+本`container`类还包括诸如响应变量`md:container`默认情况下，允许你做的东西更像一个容器中

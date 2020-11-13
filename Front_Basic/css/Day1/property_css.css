@@ -1,0 +1,28 @@
+a {
+    color: blue;
+  }
+  
+  /* 以 "#" 开头的页面本地链接 */
+  a[href^="#"] {
+    background-color: gold;
+  }
+  
+  /* 包含 "example" 的链接 */
+  a[href*="example"] {
+    background-color: silver;
+  }
+  
+  /* 包含 "insensitive" 的链接,不区分大小写 */
+  a[href*="insensitive" i] {
+    color: cyan;
+  }
+  
+  /* 包含 "cAsE" 的链接，区分大小写 */ 
+  a[href*="cAsE"] { 
+    color: pink; 
+  }
+  
+  /* 以 ".org" 结尾的链接 */
+  a[href$=".org"] {
+    color: red;
+  }

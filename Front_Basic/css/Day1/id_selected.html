@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            #red {color:red;}
+            #green {color:green;}
+            /*一个选择器，多种用法*/
+            #sidebar {
+                color:brown;
+                border: 1px dotted #000;
+                padding: 10px;
+            }
+            #sidebar p{
+                color:aliceblue;
+                font-style: italic;
+                text-align: right;
+                margin-top: 0.5em;
+            }
+            #sidebar h2{
+                color: aqua;
+                font-size: lem;
+                font-weight: normal;
+                font-style: italic;
+                margin: 0;
+                line-height: 1.5;
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="red">这个段落是用id选择器写的红色的</p>
+        <p id="green">这个段落也是用id选择器写的绿色的。</p>
+        <h1 id="sidebar">h1这个是sidebar样式</h1>
+        <div id="sidebar">
+            <h2>h2这个是sidebar h2样式</h2>
+            <p>p这个是sidebar p样式</p>
+        </div>
+        <h3 id="sidebar">h3这个是sidebar样式</h3>
+    </body>
+</html>
