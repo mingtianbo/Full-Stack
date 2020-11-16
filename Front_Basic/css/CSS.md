@@ -678,4 +678,94 @@ font-size: 20pt;
 
 #### 响应式
 
-本`container`类还包括诸如响应变量`md:container`默认情况下，允许你做的东西更像一个容器中
+本`container`类还默认包含诸如`md:container`之类的响应变量，可以使某些行为仅在特定断点的情况下位容器：
+
+```html
+<!-- Full-width fluid until the 'lg' breakpoint, then lock to container -->
+<div class="lg:container lg:mx-auto">
+  <!-- ... -->
+</div>
+```
+
+<hr/>
+
+#### 客制化
+
+**默认居中**
+
+要使容器默认居中，请在配置文件中将`center`选项设置为：`true theme.container`
+
+```js
+//tailwind.config.js
+module.exports = {
+  theme:{
+    container:{
+      center:true,
+    },
+  },
+}
+```
+
+**水平填充**
+
+要默认添加水平填充，请在配置文件中将`padding`选项指定所需的填充量`theme.container`:
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme:{
+    container:{
+      padding:'2rem',
+    },
+  },
+}
+```
+
+如果要为每个断点指定不同的填充量，请为每个对象提供一个`default`值以及任何特定断点的替代：
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme:{
+    container:{
+      padding:{
+        default:'1rem',
+        sm:'2rem',
+        lg:'4rem',
+        xl:'5rem',
+      },
+    },
+  },
+};
+```
+
+**禁用响应变量**
+
+如果要禁用响应变量，可以通过`container`在文件`tailwind.config.js`中的`variants`部分将其设置为空数组来使用：
+
+```js
+//tailwind.config.js
+module.exports = {
+  variants:{
+    // ...
++		container:[],    
+  }
+}
+```
+
+**完全禁用**
+
+如果您不打算在项目中使用`.container`类，则可以通过在配置文件中更改设置来完全禁用该类：`false corePlugins`
+
+```js
+// tailwind.config.js
+module.exports = {
+  corePlugins:{
+    // ...
++		container:false,    
+  }
+}
+```
+
+<hr/>
+
