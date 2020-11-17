@@ -769,3 +769,94 @@ module.exports = {
 
 <hr/>
 
+### 盒子尺寸
+
+用于控制浏览器应如何计算元素总大小的实用程序。
+
+| 类           | 属性                     |
+| ------------ | ------------------------ |
+| .box-border  | box-sizing: border-box;  |
+| .box-content | box-sizing: content-box; |
+
+<hr/>
+
+#### 包含边框和内边距
+
+使用`box-border`设置元素`box-sizing`到`border-box`，告诉浏览器在给其高度或宽度时包含元素的边框和内边距。
+
+这就意味着一个`100px*100px`的元素（具有`2px`的边框和所有侧面都有`4px`的内边距）将被渲染为`100px*100px`，内部内容区域为`88px*88px`。
+
+> Tailwind makes this the default for all elements in our [preflight base styles](https://tailwindcss.com/docs/preflight).
+
+```html
+<div class="box-border h-20 w-32 p-4 border-4 border-gray-400 bg-gray-200">
+  <div class="h-full w-full bg-gray-400"></div>
+</div>
+```
+
+<hr/>
+
+#### 排除边框和内边距
+
+使用`box-content`设置元素的`box-sizing`到`content-box`，告诉浏览器在元素的指定宽度或高度上添加边框和内边距。
+
+这意味着一个`100px * 100px`的元素具有`2px`的边框和在所有边上都有`4px`的填充实际上将被渲染为`112px * 112px`，内部内容区域为`100px × 100px`。
+
+```html
+<div class="box-content h-20 w-32 p-4 border-4 border-gray-400 bg-gray-200">
+  <div class="h-full w-full bg-gray-400"></div>
+</div>
+```
+
+<hr/>
+
+#### 反应灵敏
+
+要控制特定断点处的框大小，请在`{screen}:`任何现有的框大小实用程序中添加前缀。例如，用于仅在中等屏幕尺寸及以上的屏幕上`md:box-content`应用该`box-content`实用程序。
+
+```html
+<div class="box-border md:box-content ...">
+  <!-- ... -->
+</div>
+```
+
+> For more information about Tailwind's responsive design features, check out the [Responsive Design](https://tailwindcss.com/docs/responsive-design) documentation.
+
+<hr/>
+
+#### 客制化
+
+**响应和伪类变量**
+
+默认情况下，仅对`box-sizing`使用程序生成响应变量。
+
+你可以通过修改配置文件中的`variants`部分中的`boxSizing`属性来控制为`box-sizing`实用程序生成哪些变量。
+
+例如，此配置还将生成悬停和焦点变量：
+
+```js
+// tailwind.config.js
+  module.exports = {
+    variants: {
+      // ...
+-     boxSizing: ['responsive'],
++     boxSizing: ['responsive', 'hover', 'focus'],
+    }
+  }
+```
+
+**禁用**
+
+如果不打算在项目中使用盒子尺寸这个类，则可以通过更改配置文件中的属性设置为完全禁用他们：`boxSizing` `false` `corePlugins`
+
+```js
+ // tailwind.config.js
+  module.exports = {
+    corePlugins: {
+      // ...
++     boxSizing: false,
+    }
+  }
+```
+
+<hr/>
