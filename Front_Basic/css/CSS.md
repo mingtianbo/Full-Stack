@@ -794,6 +794,8 @@ module.exports = {
 </div>
 ```
 
+![](/Users/ming/Documents/learning/Full-Stack/Front_Basic/css/CSSmd图片/截屏2020-11-21 下午1.50.08.png)
+
 <hr/>
 
 #### 排除边框和内边距
@@ -807,6 +809,8 @@ module.exports = {
   <div class="h-full w-full bg-gray-400"></div>
 </div>
 ```
+
+![](/Users/ming/Documents/learning/Full-Stack/Front_Basic/css/CSSmd图片/截屏2020-11-21 下午1.50.01.png)
 
 <hr/>
 
