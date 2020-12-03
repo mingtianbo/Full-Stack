@@ -864,3 +864,206 @@ module.exports = {
 ```
 
 <hr/>
+
+## 显示
+
+用于控制元素的显示框类型的实用程序。
+
+| 类                   | 属性                          |
+| -------------------- | ----------------------------- |
+| `block`              | `display:block;`              |
+| `inline-block`       | `display:inline-block;`       |
+| `inline`             | `display:inline;`             |
+| `flex`               | `display:flex;`               |
+| `inline-flex`        | `display:inline-flex;`        |
+| `table`              | `display:table;`              |
+| `table-caption`      | `display:table-caption;`      |
+| `table-cell`         | `display:table-cell;`         |
+| `table-column`       | `display:table-column;`       |
+| `table-column-group` | `display:table-column-group;` |
+| `table-footer-group` | `display:table-footer-group;` |
+| `table-header-group` | `display:table-header-group;` |
+| `table-row-group`    | `display:table-row-group;`    |
+| `table-row`          | `display:table-row;`          |
+| `flow-root`          | `display:flow-root;`          |
+| `grid`               | `display:grid;`               |
+| `inline-grid`        | `display:inline-grid;`        |
+| `contents`           | `display:contents;`           |
+| `hidden`             | `display:none;`               |
+
+<hr/>
+
+### Block
+
+使用`block`创造一个块级元素。
+
+```html
+<div class="space-y-4 ...">
+  <span class="block ...">1</span>
+  <span class="block ...">2</span>
+  <span class="block ...">3</span>
+</div>
+```
+
+> **说明：**省略号可以写其他的属性用来修饰这个块。
+
+<hr/>
+
+### Flow-Root
+
+使用`flow-root`创建具有自己的块格式设置上下文的块级元素。
+
+```html
+<div class="space-y-4">
+  <div class="flow-root ...">
+    <div class="my-4 ...">1</div>
+  </div>
+  <div class="flow-root ...">
+    <div class="my-4 ...">2</div>
+  </div>
+</div>
+```
+
+<hr/>
+
+### Inline Block
+
+用`inline-block`创建一个内联块级元素。
+
+```html
+<div class="space-x-4 ...">
+  <div class="inline-block ...">1</div>
+  <div class="inline-block ...">2</div>
+  <div class="inline-block ...">3</div>
+</div>
+```
+
+<hr/>
+
+### Inline
+
+用`inline`创建一个内联元素。
+
+```html
+<div>
+  <div class="inline ...">1</div>
+  <div class="inline ...">2</div>
+  <div class="inline ...">3</div>
+</div>
+```
+
+<hr/>
+
+### Flex
+
+用`flex`创建一个块级灵活可伸缩容器。
+
+```html
+<div class="flex space-x-4 ...">
+  <div class="flex-1 ...">1</div>
+  <div class="flex-1 ...">2</div>
+  <div class="flex-1 ...">3</div>
+</div>
+```
+
+<hr/>
+
+### Inline flex
+
+用`inline-flex`创建一个灵活的内联容器。
+
+```html
+<div class="inline-flex space-x-4 ...">
+  <div class="flex-1 ...">1</div>
+  <div class="flex-1 ...">2</div>
+  <div class="flex-1 ...">3</div>
+</div>
+```
+
+<hr/>
+
+### Grid
+
+用`grid`创建一个网格容器。
+
+```html
+<div class="grid gap-4 grid-cols-3">
+  <!-- ... -->
+</div>
+```
+
+<hr/>
+
+### Inline Grid
+
+用`inline-grid`创建一个内联网格容器。
+
+```html
+<span class="inline-grid grid-cols-3 gap-x-4">
+  <span>1</span>
+  <span>1</span>
+  <span>1</span>
+</span>
+<span class="inline-grid grid-cols-3 gap-x-4">
+  <span>2</span>
+  <span>2</span>
+  <span>2</span>
+</span>
+```
+
+<hr/>
+
+### Contents
+
+使用`contents`创建一个“幻影”容器，其子级充当父级的直接子级。
+
+```html
+<div class="flex ...">
+  <div class="flex-1 ...">1</div>
+  <div class="contents">
+    <div class="flex-1 ...">2</div>
+    <div class="flex-1 ...">3</div>
+  </div>
+  <div class="flex-1 ...">4</div>
+</div>
+```
+
+<hr/>
+
+### Table
+
+使用`table`, `.table-row`, `.table-cell`, `.table-caption`, `.table-column`, `.table-column-group`, `.table-header-group`, `.table-row-group`，还有 `.table-footer-group` 创建行为类似各自表元素的额元素的实用程序。
+
+```html
+<div class="table w-full ...">
+  <div class="table-row-group">
+    <div class="table-row">
+      <div class="table-cell ...">A cell with more content</div>
+      <div class="table-cell ...">Cell 2</div>
+      <div class="table-cell ...">Cell 3</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell ...">Cell 4</div>
+      <div class="table-cell ...">A cell with more content</div>
+      <div class="table-cell ...">Cell 6</div>
+    </div>
+  </div>
+</div>
+```
+
+<hr/>
+
+### Hidden
+
+用`hidden`设置一个元素的属性为`display:none`，并将其从页面布局中删除（与可见性文档中的`.invisible`比较）。
+
+```html
+<div class="flex ...">
+  <div class="hidden ...">1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
