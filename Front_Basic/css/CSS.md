@@ -865,7 +865,7 @@ module.exports = {
 
 <hr/>
 
-## 显示
+### 显示
 
 用于控制元素的显示框类型的实用程序。
 
@@ -893,7 +893,7 @@ module.exports = {
 
 <hr/>
 
-### Block
+#### Block
 
 使用`block`创造一个块级元素。
 
@@ -909,7 +909,7 @@ module.exports = {
 
 <hr/>
 
-### Flow-Root
+#### Flow-Root
 
 使用`flow-root`创建具有自己的块格式设置上下文的块级元素。
 
@@ -926,7 +926,7 @@ module.exports = {
 
 <hr/>
 
-### Inline Block
+#### Inline Block
 
 用`inline-block`创建一个内联块级元素。
 
@@ -940,7 +940,7 @@ module.exports = {
 
 <hr/>
 
-### Inline
+#### Inline
 
 用`inline`创建一个内联元素。
 
@@ -954,7 +954,7 @@ module.exports = {
 
 <hr/>
 
-### Flex
+#### Flex
 
 用`flex`创建一个块级灵活可伸缩容器。
 
@@ -968,7 +968,7 @@ module.exports = {
 
 <hr/>
 
-### Inline flex
+#### Inline flex
 
 用`inline-flex`创建一个灵活的内联容器。
 
@@ -982,7 +982,7 @@ module.exports = {
 
 <hr/>
 
-### Grid
+#### Grid
 
 用`grid`创建一个网格容器。
 
@@ -994,7 +994,7 @@ module.exports = {
 
 <hr/>
 
-### Inline Grid
+#### Inline Grid
 
 用`inline-grid`创建一个内联网格容器。
 
@@ -1013,7 +1013,7 @@ module.exports = {
 
 <hr/>
 
-### Contents
+#### Contents
 
 使用`contents`创建一个“幻影”容器，其子级充当父级的直接子级。
 
@@ -1030,7 +1030,7 @@ module.exports = {
 
 <hr/>
 
-### Table
+#### Table
 
 使用`table`, `.table-row`, `.table-cell`, `.table-caption`, `.table-column`, `.table-column-group`, `.table-header-group`, `.table-row-group`，还有 `.table-footer-group` 创建行为类似各自表元素的额元素的实用程序。
 
@@ -1053,7 +1053,7 @@ module.exports = {
 
 <hr/>
 
-### Hidden
+#### Hidden
 
 用`hidden`设置一个元素的属性为`display:none`，并将其从页面布局中删除（与可见性文档中的`.invisible`比较）。
 
@@ -1067,3 +1067,110 @@ module.exports = {
 
 <hr/>
 
+### 浮动
+
+用于控制内容在元素周围的环绕的实用程序。
+
+| 类            | 属性值         |
+| ------------- | -------------- |
+| `float-right` | `float:right;` |
+| `float-left`  | `float:left;`  |
+| `float-none`  | `float:none;`  |
+
+<hr/>
+
+#### 向右浮动
+
+使用`float-right`将元素浮动到其容器的右侧。
+
+```html
+<img class="float-right ..." src="/Users/ming/Documents/learning/Full-Stack/Front_Basic/css/Day2/image.jpg">
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis, vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis, porttitor magna. Cras pellentesque leo est, et luctus neque rutrum eu. Aliquam consequat velit sed sem posuere, vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum fringilla. Donec varius vehicula magna sit amet auctor. Ut congue vehicula lectus in blandit. Vivamus suscipit eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra, efficitur odio eu, finibus justo. Etiam eu vehicula felis.
+</p>
+```
+
+<hr/>
+
+#### 向左浮动
+
+使用`float-left`将元素浮动到其容器的左侧。
+
+```html
+<img class="float-left ..." src="/Users/ming/Documents/learning/Full-Stack/Front_Basic/css/Day2/image.jpg">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis, vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis, porttitor magna. Cras pellentesque leo est, et luctus neque rutrum eu. Aliquam consequat velit sed sem posuere, vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum fringilla. Donec varius vehicula magna sit amet auctor. Ut congue vehicula lectus in blandit. Vivamus suscipit eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra, efficitur odio eu, finibus justo. Etiam eu vehicula felis.</p>
+```
+
+<hr/>
+
+#### 不浮动
+
+使用`float-none`重置应用于元素的所有浮动。这是`float`属性的默认值。
+
+```html
+<img class="float-none ..." src="/Users/ming/Documents/learning/Full-Stack/Front_Basic/css/Day2/image.jpg">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis, vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis, porttitor magna. Cras pellentesque leo est, et luctus neque rutrum eu. Aliquam consequat velit sed sem posuere, vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum fringilla. Donec varius vehicula magna sit amet auctor. Ut congue vehicula lectus in blandit. Vivamus suscipit eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra, efficitur odio eu, finibus justo. Etiam eu vehicula felis.</p>
+```
+
+<hr/>
+
+### 清除
+
+用于控制内容在元素周围的环绕的实用程序。
+
+| 类            | 属性值         |
+| ------------- | -------------- |
+| `clear-left`  | `clear:left;`  |
+| `clear-right` | `clear:right;` |
+| `clear-both`  | `clear:both;`  |
+| `clear-none`  | `clear:none;`  |
+
+<hr/>
+
+#### 左清除
+
+使用`clear-left`将元素放置在任何先前的左浮动元素下方。
+
+```html
+<img class="float-left ..." src="/Users/ming/Documents/learning/Full-Stack/Front_Basic/css/Day2/image.jpg">
+<img class="float-right ..." src="/Users/ming/Documents/learning/Full-Stack/Front_Basic/css/Day2/image.jpg">
+<p class="clear-left ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis, vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis, porttitor magna. Cras pellentesque leo est, et luctus neque rutrum eu. Aliquam consequat velit sed sem posuere, vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum fringilla. Donec varius vehicula magna sit amet auctor. Ut congue vehicula lectus in blandit. Vivamus suscipit eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra, efficitur odio eu, finibus justo. Etiam eu vehicula felis.</p>
+```
+
+<hr/>
+
+#### 右清除
+
+使用`clear-right`将元素放置在任何先前的右浮动元素下方。
+
+```html
+<img class="float-left ..." src="/Users/ming/Documents/learning/Full-Stack/Front_Basic/css/Day2/image.jpg">
+<img class="float-right ..." src="/Users/ming/Documents/learning/Full-Stack/Front_Basic/css/Day2/image.jpg">
+<p class="clear-right ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis, vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis, porttitor magna. Cras pellentesque leo est, et luctus neque rutrum eu. Aliquam consequat velit sed sem posuere, vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum fringilla. Donec varius vehicula magna sit amet auctor. Ut congue vehicula lectus in blandit. Vivamus suscipit eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra, efficitur odio eu, finibus justo. Etiam eu vehicula felis.</p>
+```
+
+<hr/>
+
+#### 清除所有
+
+使用`clear-both`将元素放置在任何先前浮动的元素下方。
+
+```html
+<img class="float-left ..." src="/Users/ming/Documents/learning/Full-Stack/Front_Basic/css/Day2/image.jpg">
+<img class="float-right ..." src="/Users/ming/Documents/learning/Full-Stack/Front_Basic/css/Day2/image.jpg">
+<p class="clear-both ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis, vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis, porttitor magna. Cras pellentesque leo est, et luctus neque rutrum eu. Aliquam consequat velit sed sem posuere, vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum fringilla. Donec varius vehicula magna sit amet auctor. Ut congue vehicula lectus in blandit. Vivamus suscipit eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra, efficitur odio eu, finibus justo. Etiam eu vehicula felis.</p>
+```
+
+<hr/>
+
+#### 取消清除
+
+使用`clear-none`重置所有应用于元素的清除。这是`clear`属性的默认值。
+
+```html
+<img class="float-left ..." src="/Users/ming/Documents/learning/Full-Stack/Front_Basic/css/Day2/image.jpg">
+<img class="float-right ..." src="/Users/ming/Documents/learning/Full-Stack/Front_Basic/css/Day2/image.jpg">
+<p class="clear-none ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis, vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis, porttitor magna. Cras pellentesque leo est, et luctus neque rutrum eu. Aliquam consequat velit sed sem posuere, vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum fringilla. Donec varius vehicula magna sit amet auctor. Ut congue vehicula lectus in blandit. Vivamus suscipit eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra, efficitur odio eu, finibus justo. Etiam eu vehicula felis.</p>
+```
+
+<hr/>
