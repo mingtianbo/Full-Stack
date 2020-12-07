@@ -615,7 +615,7 @@ font-size: 20pt;
 
 
 
-## 布局
+## 布局概述
 
 ### 容器
 
@@ -1174,3 +1174,207 @@ module.exports = {
 ```
 
 <hr/>
+
+### 对象拟合
+
+用于控制应如何调整替换元素内容大小的实用程序。
+
+| 类                  | 属性                     |
+| ------------------- | ------------------------ |
+| `object-contain`    | `object-fit:contain;`    |
+| `object-cover`      | `object-fit:cover;`      |
+| `object-fill`       | `object-fit:fill;`       |
+| `object-none`       | `object-fit:none;`       |
+| `object-scale-down` | `object-fit:scale-down;` |
+
+<hr/>
+
+#### 包含
+
+使用`.object-contain`调整元素内容的大小以使其包含在其容器中。
+
+```html
+<div class="bg-rose-300 ...">
+  <img class="object-contain h-48 w-full ..."> 
+</div>
+```
+
+<hr/>
+
+#### 覆盖
+
+使用`.object-cover`调整元素内容的大小以使其覆盖其容器。
+
+```html
+<div class="bg-indigo-300 ...">
+  <img class="object-cover h-48 w-full ...">
+</div>
+```
+
+<hr/>
+
+#### 填充
+
+使用`.object-fill`拉伸元素内容使其适合其容器的尺寸。
+
+```html
+<div class="bg-light-blue-300 ...">
+  <img class="object-fill h-48 w-full ...">
+</div>
+```
+
+<hr/>
+
+#### 清除
+
+使用`.object-none`使元素忽略容器尺寸而显示元素原始尺寸。
+
+```html
+<div class="bg-yellow-300 ...">
+  <img class="object-none h-48 w-full ...">
+</div>
+```
+
+<hr/>
+
+#### 缩小
+
+以其原始大小显示元素的内容，但必要时可以使用`.object-scale-down`将该元素缩小以适合其容器。
+
+```html
+<div class="bg-green-300">
+  <img class="object-scale-down h-48 w-full ...">
+</div>
+```
+
+<hr/>
+
+### 对象位置
+
+用于控制替换元素的内容应如何放置在其容器中的实用程序。
+
+| 类                    | 属性                            |
+| --------------------- | ------------------------------- |
+| `object-bottom`       | `object-position:bottom;`       |
+| `object-center`       | `object-position:center;`       |
+| `object-left`         | `object-position:left;`         |
+| `object-left-bottom`  | `object-position:left bottom;`  |
+| `object-left-top`     | `object-position:left top;`     |
+| `object-right`        | `object-position:right;`        |
+| `object-right-bottom` | `object-position:right bottom;` |
+| `object-right-top`    | `object-position:right top;`    |
+| `object-top`          | `object-position:top;`          |
+
+<hr/>
+
+#### 用法
+
+使用`object-{side}`实用程序来指定替换元素的内容应如何放置在其容器中。
+
+```html
+<img class="object-none object-left-top bg-yellow-300 w-24 h-24 ..." src="...">
+<img class="object-none object-top bg-yellow-300 w-24 h-24 ..." src="...">
+<img class="object-none object-right-top bg-yellow-300 w-24 h-24 ..." src="...">
+<img class="object-none object-left bg-yellow-300 w-24 h-24 ..." src="...">
+<img class="object-none object-center bg-yellow-300 w-24 h-24 ..." src="...">
+<img class="object-none object-right bg-yellow-300 w-24 h-24 ..." src="...">
+<img class="object-none object-left-bottom bg-yellow-300 w-24 h-24 ..." src="...">
+<img class="object-none object-bottom bg-yellow-300 w-24 h-24 ..." src="...">
+<img class="object-none object-right-bottom bg-yellow-300 w-24 h-24 ..." src="...">
+```
+
+<hr/>
+
+### 溢出
+
+用于控制元素如何处理对于容器而言太大的内容的实用程序。
+
+| 类                   | 属性                  |
+| -------------------- | --------------------- |
+| `overflow-auto`      | `overflow:auto;`      |
+| `overflow-hidden`    | `overflow:hidden;`    |
+| `overflow-visible`   | `overflow:visible;`   |
+| `overflow-scroll`    | `overflow:scroll;`    |
+| `overflow-x-auto`    | `overflow-x:auto;`    |
+| `overflow-y-auto`    | `overflow-y:auto;`    |
+| `overflow-x-hidden`  | `overflow-x:hidden;`  |
+| `overflow-y-hidden`  | `overflow-y:hidden;`  |
+| `overflow-x-visible` | `overflow-x:visible;` |
+| `overflow-y-visible` | `overflow-y:visible;` |
+| `overflow-x-scroll`  | `overflow-x:scroll;`  |
+| `overflow-y-scroll`  | `overflow-y:scroll;`  |
+
+<hr/>
+
+#### 可见
+
+使用`overflow-visible`可以防止元素中的内容被剪裁。请注意，任何超出元素范围的内容都将可见。
+
+```html
+<div class="overflow-visible h-24 h- ...">Lorem ipsum dolor sit amet...</div>
+```
+
+<hr/>
+
+#### 自动
+
+如果元素的内容溢出该元素的边界，请使用`.overflow-auto`将滚动条添加到该元素。 与始终显示滚动条的`.overflow-scroll`不同，此实用程序仅在需要滚动时才显示它们。
+
+```html
+<div class="overflow-auto h-32 ...">Lorem ipsum dolor sit amet...</div>
+```
+
+<hr/>
+
+#### 隐藏
+
+使用`overflow-hidden`去裁剪超出元素边界的内容。
+
+```html
+<div class="overflow-hidden h-32 ...">Lorem ipsum dolor sit amet...</div>
+```
+
+<hr/>
+
+#### 水平滚动
+
+使用`overflow-x-auto`允许**需要时**水平滚动。
+
+```html
+<div class="overflow-x-auto ...">QrLmmW69vMQD...</div>
+```
+
+使用`overflow-x-scroll`允许**水平滚动并始终显示滚动条**，除非操作系统禁用了始终可见的滚动条。
+
+```html
+<div class="overflow-x-scroll ...">QrLmmW69vMQD...</div>
+```
+
+<hr/>
+
+#### 垂直滚动
+
+使用`overflow-y-auto`允许**需要时**垂直滚动。
+
+```html
+<div class="overflow-y-auto h-32 ...">Lorem ipsum dolor sit amet...</div>
+```
+
+使用`overflow-y-scroll`允许**垂直滚动并始终显示滚动条**，除非操作系统禁用了始终可见的滚动条。
+
+```html
+<div class="overflow-y-scroll h-32 ...">Lorem ipsum dolor sit amet...</div>
+```
+
+<hr/>
+
+#### 全方位滚动
+
+使用`overflow-scroll`将滚动条添加到元素。 与`.overflow-auto`（仅在必要时显示滚动条）不同，此实用程序始终显示它们。 请注意，无论此设置如何，某些操作系统（如macOS）都会隐藏不必要的滚动条。
+
+```html
+<div class="overflow-scroll h-32 ...">Lorem ipsum dolor sit amet...</div>
+```
+
+<hr/>
+
