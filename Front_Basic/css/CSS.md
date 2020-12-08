@@ -1378,3 +1378,292 @@ module.exports = {
 
 <hr/>
 
+### 过度滚动行为
+
+用于控制浏览器到达滚动区域边界时的行为的实用程序。
+
+| 类                     | 属性                             |
+| ---------------------- | -------------------------------- |
+| `overscroll-auto`      | `overscroll-behavior:auto;`      |
+| `overscroll-contain`   | `overscroll-behavior:contain;`   |
+| `overscroll-none`      | `overscroll-behavior:none;`      |
+| `overscroll-y-auto`    | `overscroll-behavior-y:auto;`    |
+| `overscroll-y-contain` | `overscroll-behavior-y:contain;` |
+| `overscroll-y-none`    | `overscroll-behavior-y:none;`    |
+| `overscroll-x-auto`    | `overscroll-behavior-x:auto;`    |
+| `overscroll-x-contain` | `overscroll-behavior-x:contain;` |
+| `overscroll-x-none`    | `overscroll-behavior-x:none;`    |
+
+<hr/>
+
+#### 自动
+
+使用`overscroll-auto`可让用户在到达原始滚动区域的边界时继续滚动父滚动区域。
+
+```html
+<div class="overscroll-auto ...">Lorem ipsum dolor sit amet...</div>
+```
+
+<hr/>
+
+#### 牵制
+
+使用`overscroll-contain`可以防止在到达原始滚动区域的边界时继续滚动父滚动区域，但是在支持容器的操作系统中滚动经过容器的末尾时可以保留“反弹”效果。
+
+```html
+<div class="overscroll-contain ...">Lorem ipsum dolor sit amet...</div>
+```
+
+<hr/>
+
+#### 清除
+
+使用`overscroll-none`可以防止在到达原始滚动区域的边界时继续滚动父滚动区域，并且还可以防止在滚动超过容器末端时出现“反弹”效果。
+
+```html
+<div class="overscroll-none ...">Lorem ipsum dolor sit amet...</div>
+```
+
+<hr/>
+
+### 定位
+
+用于控制元素在DOM中的位置的实用程序。
+
+| 类         | 属性                 |
+| ---------- | -------------------- |
+| `static`   | `position:static;`   |
+| `fixed`    | `position:fixed;`    |
+| `absolute` | `position:absolute;` |
+| `relative` | `position:relative;` |
+| `sticky`   | `position:sticky;`   |
+
+<hr/>
+
+#### 静态定位
+
+使用`static`根据文档的正常流程放置元素。
+
+任何偏移量都将被忽略，并且该元素将不会充当绝对定位的子代的位置参考。
+
+```html
+<div class="static ...">
+  <p>Static parent</p>
+  <div class="absolute bottom-0 left-0 ...">
+    <p>Absolute child</p>
+  </div>
+</div>
+```
+
+<hr/>
+
+#### 相对定位
+
+使用`relative`根据文档的正常流程放置元素。
+
+相对于元素的正常位置计算偏移，并且元素将充当绝对定位的子代的位置参考。
+
+```html
+<div class="relative ...">
+  <p>Static parent</p>
+  <div class="absolute bottom-0 left-0 ...">
+    <p>Absolute child</p>
+  </div>
+</div>
+```
+
+<hr/>
+
+#### 绝对定位
+
+使用`absolute`将元素放置在文档的常规流程之外，从而使相邻元素的行为就像该元素不存在一样。
+
+偏移是相对于最近的父节点（其定位不是`static`）计算的，并且该元素将用作其他绝对定位子节点的位置参考。
+
+```html
+<div class="static ...">
+  <!-- Static parent -->
+  <div class="static ..."><p>Static child</p></div>
+  <div class="inline-block ..."><p>Static sibling</p></div>
+  <!-- Static parent -->
+  <div class="absolute ..."><p>Absolute child</p></div>
+  <div class="inline-block ..."><p>Static sibling</p></div>
+</div>
+```
+
+<hr/>
+
+#### 固定定位
+
+使用`fixed`将元素相对于浏览器窗口定位。
+
+偏移是相对于视口计算的，该元素将充当绝对定位的子代的位置参考。
+
+```html
+<div>
+  <div class="fixed ...">
+    Fixed child
+  </div>
+
+  Scroll me!
+
+  Lorem ipsum...
+</div>
+```
+
+<hr/>
+
+#### 粘滞定位
+
+使用`sticky`将元素定位为`relative`，直到超过指定的阈值，然后将其视为固定元素，直到其父级离开屏幕。
+
+相对于元素的正常位置计算偏移，并且元素将充当绝对定位的子代的位置参考。
+
+```html
+<div>
+  <div class="sticky top-0 ...">Sticky Heading 1</div>
+  <p class="py-4">Quisque cursus...</p>
+</div>
+<div>
+  <div class="sticky top-0 ...">Sticky Heading 2</div>
+  <p class="py-4">Integer lacinia...</p>
+</div>
+<div>
+  <div class="sticky top-0 ...">Sticky Heading 3</div>
+  <p class="py-4">Nullam mauris...</p>
+</div>
+<!-- etc. -->
+```
+
+<hr/>
+
+### 上/右/下/左
+
+用于控制定位元素放置的实用程序。
+
+[具体类与其属性](https://tailwindcss.com/docs/top-right-bottom-left)
+
+**用法**
+
+使用`{top|right|bottom|left|inset} -0`实用程序将绝对定位的元素锚定在最接近的父对象的任何边缘上。
+
+结合`Tailwind`的`padding`和`margin`工具，您可能会发现这些都是精确控制绝对定位的元素所需要的。
+
+```html
+<!-- Span top edge -->
+<div class="relative h-32 w-32 ...">
+  <div class="absolute inset-x-0 top-0 h-16 w-16 ...">1</div>
+</div>
+
+<!-- Span right edge -->
+<div class="relative h-32 w-32 ...">
+  <div class="absolute inset-y-0 right-0 w-16 ...">2</div>
+</div>
+
+<!-- Span bottom edge -->
+<div class="relative h-32 w-32 ...">
+  <div class="absolute inset-x-0 bottom-0 h-16 w-16 ...">3</div>
+</div>
+
+<!-- Span left edge -->
+<div class="relative h-32 w-32 ...">
+  <div class="absolute inset-y-0 left-0 w-16 ...">4</div>
+</div>
+
+<!-- Fill entire parent -->
+<div class="relative h-32 w-32 ...">
+  <div class="absolute inset-0 ...">5</div>
+</div>
+
+<!-- Pin to top left corner -->
+<div class="relative h-32 w-32 ...">
+  <div class="absolute left-0 top-0 h-16 w-16 ...">6</div>
+</div>
+
+<!-- Pin to top right corner -->
+<div class="relative h-32 w-32 ...">
+  <div class="absolute top-0 right-0 h-16 w-16 ...">7</div>
+</div>
+
+<!-- Pin to bottom right corner -->
+<div class="relative h-32 w-32 ...">
+  <div class="absolute bottom-0 right-0 h-16 w-16 ...">8</div>
+</div>
+
+<!-- Pin to bottom left corner -->
+<div class="relative h-32 w-32 ...">
+  <div class="absolute bottom-0 left-0 h-16 w-16 ...">9</div>
+</div>
+```
+
+<hr/>
+
+### 可见性
+
+用于控制元素可见性的实用程序。
+
+| 类          | 属性                  |
+| ----------- | --------------------- |
+| `visible`   | `visibility:visible;` |
+| `invisible` | `visibility:hidden;`  |
+
+<hr/>
+
+#### 不可见
+
+使用`invisible`隐藏元素，但仍保留其在`DOM中`的位置，从而影响其他元素的布局（与显示布局中的`.hidden`比较）。
+
+```html
+<div class="flex justify-center space-x-4">
+  <div>1</div>
+  <div class="invisible ...">2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### 可见
+
+使用`visible`使元素可见。 这对于在不同屏幕尺寸下撤消`invisible`属性很有用。
+
+```html
+<div class="flex justify-center space-x-4">
+  <div>1</div>
+  <div class="visible ...">2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+### Z-Index
+
+用于控制元素的堆栈顺序的实用程序。
+
+| Class  | Properties     |
+| ------ | -------------- |
+| z-0    | z-index: 0;    |
+| z-10   | z-index: 10;   |
+| z-20   | z-index: 20;   |
+| z-30   | z-index: 30;   |
+| z-40   | z-index: 40;   |
+| z-50   | z-index: 50;   |
+| z-auto | z-index: auto; |
+
+**用法**
+
+使用`z- {index}`实用程序控制`Tailwind`中元素的堆栈顺序（或三维定位），无论其显示顺序如何。
+
+```html
+<div class="z-40 ...">5</div>
+<div class="z-30 ...">4</div>
+<div class="z-20 ...">3</div>
+<div class="z-10 ...">2</div>
+<div class="z-0 ...">1</div>
+```
+
+<hr/>
+
+## 弹性盒
+
