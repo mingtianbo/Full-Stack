@@ -1667,3 +1667,348 @@ module.exports = {
 
 ## 弹性盒
 
+### 弹性方向
+
+用于控制弹性项目方向的实用程序。
+
+| 类                 | 属性                             |
+| ------------------ | -------------------------------- |
+| `flex-row`         | `flex-direction:row;`            |
+| `flex-row-reverse` | `flex-direction:row-reverse;`    |
+| `flex-col`         | `flex-direction:column;`         |
+| `flex-col-reverse` | `flex-direction:column-reverse;` |
+
+<hr/>
+
+#### Row
+
+使用`flex-row`在与文本相同的方向上水平放置弹性项目。
+
+```html
+<div class="flex flex-row ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### Row-Reverse
+
+使用`flex-row-reverse`在相反的方向上水平放置弹性项目。
+
+```html
+<div class="flex flex-row-reverse ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### Col
+
+使用`flex-col`垂直放置弹性项目。
+
+```html
+<div class="flex flex-col ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### Rol-Reverse
+
+使用`flex-col-reverse`在相反的方向上垂直放置弹性项目。
+
+```html
+<div class="flex flex-col-reverse ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+### 弹性包装
+
+用于控制弹性项目包装方式的实用程序。
+
+| 类                  | 属性                      |
+| ------------------- | ------------------------- |
+| `flex-wrap`         | `flex-wrap:wrap;`         |
+| `flex-wrap-reverse` | `flex-wrap:wrap-reverse;` |
+| `flex-nowrap`       | `flex-wrap:nowrap;`       |
+
+<hr/>
+
+#### No-Wrap
+
+使用`flex-nowrap`防止弹性包装，必要时使非弹性项目溢出容器。
+
+```html
+<div class="flex flex-nowrap">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### Wrap
+
+使用`flex-wrap`允许弹性项目被包装。
+
+```html
+<div class="flex flex-wrap">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### Wrap-Reverse
+
+使用`flex-wrap-reverse`以相反的方向包装弹性项。
+
+```html
+<div class="flex flex-wrap-reverse">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+### 弹性
+
+用于控制弹性项目如何增长和收缩的实用程序。
+
+| 类             | 属性             |
+| -------------- | ---------------- |
+| `flex-1`       | `flex:1 1 0%`    |
+| `flex-auto`    | `flex:1 1 auto;` |
+| `flex-initial` | `flex:0 1 auto;` |
+| `flex-none`    | `flex:none;`     |
+
+<hr/>
+
+#### Initial
+
+考虑到其初始大小，请使用`flex-initial`使其收缩但不使其增长。
+
+```html
+<div class="flex">
+  <div class="flex-initial ...">
+    <!-- Won't grow, but will shrink if needed -->
+  </div>
+  <div class="flex-initial ...">
+    <!-- Won't grow, but will shrink if needed -->
+  </div>
+  <div class="flex-initial ...">
+    <!-- Won't grow, but will shrink if needed -->
+  </div>
+</div>
+```
+
+<hr/>
+
+#### Flex 1
+
+使用`flex-1`允许弹性项目根据需要增长和收缩，而忽略其初始大小。
+
+```html
+<div class="flex">
+  <div class="flex-1 ...">
+    <!-- Will grow and shrink as needed without taking initial size into account -->
+  </div>
+  <div class="flex-1 ...">
+    <!-- Will grow and shrink as needed without taking initial size into account -->
+  </div>
+  <div class="flex-1 ...">
+    <!-- Will grow and shrink as needed without taking initial size into account -->
+  </div>
+</div>
+```
+
+<hr/>
+
+#### Auto
+
+考虑到其初始大小，请使用`flex-auto`使弹性项目增长和收缩。
+
+```html
+<div class="flex ...">
+  <div class="flex-auto ...">
+    <!-- Will grow and shrink as needed taking initial size into account -->
+  </div>
+  <div class="flex-auto ...">
+    <!-- Will grow and shrink as needed taking initial size into account -->
+  </div>
+  <div class="flex-auto ...">
+    <!-- Will grow and shrink as needed taking initial size into account -->
+  </div>
+</div>
+```
+
+<hr/>
+
+#### None
+
+使用`flex-none`防止弹性项增长或收缩。
+
+```html
+<div class="flex ...">
+  <div class="flex-1 ...">
+    <!-- Will grow and shrink as needed -->
+  </div>
+  <div class="flex-none ...">
+    <!-- Will grow and shrink as needed taking initial size into account -->
+  </div>
+  <div class="flex-1 ...">
+    <!-- Will grow and shrink as needed -->
+  </div>
+</div>
+```
+
+<hr/>
+
+### 弹性增长
+
+用于控制弹性项目增长方式的实用程序。
+
+| 类            | 属性           |
+| ------------- | -------------- |
+| `flex-grow-0` | `flex-grow:0;` |
+| `flex-grow`   | `flex-grow:1;` |
+
+<hr/>
+
+#### Grow
+
+使用`flex-grow`允许弹性项目增长以填充任何可用空间。
+
+```html
+<div class="flex ...">
+  <div class="flex-none w-16 h-16 ...">
+    <!-- This item will not grow -->
+  </div>
+  <div class="flex-grow h-16 ...">
+    <!-- This item will grow -->
+  </div>
+  <div class="flex-none w-16 h-16 ...">
+    <!-- This item will not grow -->
+  </div>
+</div>
+```
+
+<hr/>
+
+#### Don't grow
+
+使用`flex-grow-0`防止弹性项目增长。
+
+```html
+<div class="flex ...">
+  <div class="flex-grow h-16 ...">
+    <!-- This item will grow -->
+  </div>
+  <div class="flex-grow-0 h-16 ...">
+    <!-- This item will not grow -->
+  </div>
+  <div class="flex-grow h-16 ...">
+    <!-- This item will grow -->
+  </div>
+</div>
+```
+
+<hr/>
+
+### 弹性收缩
+
+用于控制弹性项目收缩方式的实用程序。
+
+| 类              | 属性             |
+| --------------- | ---------------- |
+| `flex-shrink-0` | `flex-shrink:0;` |
+| `flex-shrink`   | `flex-shrink:1;` |
+
+<hr/>
+
+#### Shrink
+
+使用`flex-shrink`允许弹性项目在需要时收缩。
+
+```html
+<div class="flex ...">
+  <div class="flex-grow w-16 h-16 ...">
+    <!-- This item will grow or shrink as needed -->
+  </div>
+  <div class="flex-shrink w-64 h-16 ...">
+    <!-- This item will shrink -->
+  </div>
+  <div class="flex-grow w-16 h-16 ...">
+    <!-- This item will grow or shrink as needed -->
+  </div>
+</div>
+```
+
+<hr/>
+
+#### Don't shrink
+
+使用`flex-shrink-0`防止弹性项目收缩。
+
+```html
+<div class="flex ...">
+  <div class="flex-1 h-16 ...">
+    <!-- This item will grow or shrink as needed -->
+  </div>
+  <div class="flex-shrink-0 h-16 w-32 ...">
+    <!-- This item will not shrink below its initial size-->
+  </div>
+  <div class="flex-1 h-16 ...">
+    <!-- This item will grow or shrink as needed -->
+  </div>
+</div>
+```
+
+<hr/>
+
+### 顺序
+
+用于控制弹性项目顺序的实用程序。
+
+| 类            | 属性           |
+| ------------- | -------------- |
+| `order-1`     | `order:1;`     |
+| `order-2`     | `order:2;`     |
+| `order-...`   | `order:...`    |
+| `order-first` | `order:-9999;` |
+| `order-last`  | `order:9999;`  |
+| `order-none`  | `order:0;`     |
+
+**用法**
+
+使用`order- {order}`可以按照与`DOM`中不同的顺序渲染弹性项目。
+
+```html
+<div class="flex justify-between ...">
+    <div class="order-last">1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+```
+
+<hr/>
+
