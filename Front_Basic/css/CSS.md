@@ -2012,3 +2012,260 @@ module.exports = {
 
 <hr/>
 
+## 网格
+
+### 网格模板列
+
+用于指定网格布局中的列的实用程序。
+
+| 类                   | 属性                                                    |
+| -------------------- | ------------------------------------------------------- |
+| `grid-cols-1`        | `grid-template-columns:repeat(1,minmax(0,1fr));`        |
+| `grid-cols-{number}` | `grid-template-columns:repeat({number},minmax(0,1fr));` |
+| `grid-cols-none`     | `grid-template-columns:none;`                           |
+
+**用法**
+
+使用`grid-cols- {n}`实用程序创建具有`n`个大小相等的行的网格。
+
+```html
+<div class="grid grid-cols-3 gap-4">
+  <div>1</div>   
+  <!-- ... -->   
+  <div>9</div> 
+</div>
+```
+
+<hr/>
+
+### 网格列开始/结束
+
+用于控制如何在网格列之间调整大小和放置元素的实用程序。
+
+| 类               | 属性                           |
+| ---------------- | ------------------------------ |
+| `col-auto`       | `grid-column:auto;`            |
+| `col-span-{n}`   | `grid-column:span{n}/span{n};` |
+| `col-span-full`  | `grid-column:1/-1;`            |
+| `col-start-{n}`  | `grid-column-start:{n};`       |
+| `col-start-auto` | `grid-column-start:auto;`      |
+| `col-end-{n}`    | `grid-column-end:{n};`         |
+| `col-end-auto`   | `grid-column-end:auto;`        |
+
+#### Spanning columns
+
+使用`col-span- {n}`实用程序使元素跨越`n`列。
+
+```html
+<div class="grid grid-cols-3 gap-4">
+  <div class="...">1</div>
+  <div class="...">2</div>
+  <div class="...">3</div>
+  <div class="col-span-2 ...">4</div>
+  <div class="...">5</div>
+  <div class="...">6</div>
+  <div class="col-span-2 ...">7</div>
+</div>
+```
+
+<hr/>
+
+####  Starting and ending lines
+
+使用`col-start- {n}`和`col-end- {n}`实用程序使元素在第n个网格线处开始或结束。 这些也可以与`col-span- {n}`实用程序结合使用以跨越特定数量的列。
+
+请注意，CSS网格线从1开始，而不是0，因此6列网格中的全宽元素将从第1行开始，到第7行结束。
+
+```html
+<div class="grid grid-cols-6 gap-4">
+  <div class="col-start-2 col-span-4 ...">1</div>
+  <div class="col-start-1 col-end-3 ...">2</div>
+  <div class="col-end-7 col-span-2 ...">3</div>
+  <div class="col-start-1 col-end-7 ...">4</div>
+</div>
+```
+
+<hr/>
+
+### 网格模版行
+
+用于指定网格布局中的行的实用程序。
+
+| 类               | 属性                                            |
+| ---------------- | ----------------------------------------------- |
+| `grid-rows-{n}`  | `grid-template-rows:repeat({n},minmax(0,1fr));` |
+| `grid-rows-none` | `grid-template-rows:none;`                      |
+
+**用法**
+
+使用`grid-rows- {n}`实用程序创建具有`n`个大小相等的行的网格。
+
+```html
+<div class="h-64 grid grid-rows-3 grid-flow-col gap-4">
+  <div>1</div>
+  <!-- ... -->
+  <div>9</div>
+</div>
+```
+
+<hr/>
+
+### 网格行开始/结束
+
+| 类               | 属性                        |
+| ---------------- | --------------------------- |
+| `row-auto`       | `grid-row:auto;`            |
+| `row-span-{n}`   | `grid-row:span{n}/span{n};` |
+| `row-span-full`  | `grid-row:1/-1;`            |
+| `row-start-{n}`  | `grid-row-start:{n};`       |
+| `row-start-auto` | `grid-row-start:auto;`      |
+| `row-end-{n}`    | `grid-row-end:{n};`         |
+| `row-end-auto`   | `grid-row-end:auto;`        |
+
+<hr/>
+
+#### Spanning rows
+
+使用`row-span-{n}`使用程序使元素横跨n行。
+
+```html
+<div class="grid grid-rows-3 grid-flow-col gap-4">
+  <div class="row-span-3 ...">1</div>
+  <div class="col-span-2 ...">2</div>
+  <div class="row-span-2 col-span-2 ...">3</div>
+</div>
+```
+
+<hr/>
+
+#### Starting and ending lines
+
+使用`row-start- {n}`和`row-end- {n}`实用程序使元素在第`n`个网格线处开始或结束。 这些也可以与`row-span- {n}`实用程序结合使用，以跨越特定数量的行。
+
+请注意，CSS网格线从1开始，而不是0，因此3行网格中的全高元素将从第1行开始，到第4行结束。
+
+```html
+<div class="grid grid-rows-3 grid-flow-col gap-4">
+  <div class="row-start-2 row-span-2 ...">1</div>
+  <div class="row-end-3 row-span-2 ...">2</div>
+  <div class="row-start-1 row-end-4 ...">3</div>
+</div>
+```
+
+<hr/>
+
+### 网格自动漂浮
+
+用于控制如何自动放置网格中的元素的实用程序。
+
+| 类                    | 属性                            |
+| --------------------- | ------------------------------- |
+| `grid-flow-row`       | `grid-auto-flow: row;`          |
+| `grid-flow-col`       | `grid-auto-flow: column;`       |
+| `grid-flow-row-dense` | `grid-auto-flow: row dense;`    |
+| `grid-flow-col-dense` | `grid-auto-flow: column dense;` |
+
+<hr/>
+
+**用法**
+
+使用`grid-flow- {keyword}`实用程序来控制自动放置算法对网格布局的工作方式。
+
+```html
+<div class="grid grid-flow-col grid-cols-3 grid-rows-3 gap-4">
+  <div>1</div>
+  <!-- ... -->
+  <div>9</div>
+</div>
+```
+
+<hr/>
+
+### 网格自动列
+
+用于控制隐式创建的网格列的大小的实用程序。
+
+| 类               | 属性                               |
+| ---------------- | ---------------------------------- |
+| `auto-cols-auto` | `grid-auto-columns:auto;`          |
+| `auto-cols-min`  | `grid-auto-columns:min-content;`   |
+| `auto-cols-max`  | `grid-auto-columns:max-content;`   |
+| `auto-cols-fr`   | `grid-auto-columns:minmax(0,1fr);` |
+
+<hr/>
+
+**用法**
+
+使用`auto-cols-{size}`实用程序控制隐式创建的网格列的大小。
+
+```html
+<div class="grid grid-flow-col auto-cols-max">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+### 网格自动行
+
+用于控制隐式创建的网格行的大小的实用程序。
+
+| 类               | 属性                            |
+| ---------------- | ------------------------------- |
+| `auto-rows-auto` | `grid-auto-rows:auto;`          |
+| `auto-rows-min`  | `grid-auto-rows:min-content;`   |
+| `auto-rows-max`  | `grid-auto-rows:max-content;`   |
+| `auto-rows-fr`   | `grid-auto-rows:minmax(0,1fr);` |
+
+<hr/>
+
+**用法**
+
+使用`auto-rows-{size}`实用程序控制隐式创建的网格行的大小。
+
+```html
+<div class="grid grid-flow-row auto-rows-max">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+### 间隙
+
+用于控制网格行和列之间的装订线的实用程序。
+
+[具体类和属性][https://tailwindcss.com/docs/gap]
+
+#### gap-{size}
+
+使用`gap- {size}`更改网格布局中行和列之间的间隙。
+
+```html
+<div class="grid gap-4 grid-cols-2">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+</div>
+```
+
+#### gap-x-{size} and gap-y-{size}
+
+使用`gap-x- {size}`和`gap-y- {size}`分别更改行和列之间的间隙。
+
+```html
+<div class="grid gap-x-8 gap-y-4 grid-cols-3">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
