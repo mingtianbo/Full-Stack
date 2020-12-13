@@ -2269,3 +2269,898 @@ module.exports = {
 </div>
 ```
 
+<hr/>
+
+## 框对齐
+
+### Justify Content
+
+用于控制如何沿容器的主轴放置`flex`和`grid`项目的实用程序。
+
+| 类                | 属性                             |
+| ----------------- | -------------------------------- |
+| `justify-start`   | `justify-content:flex-start;`    |
+| `justify-end`     | `justify-content:flex-end;`      |
+| `justify-center`  | `justify-content:center;`        |
+| `justify-between` | `justify-content:space-between;` |
+| `justify-around`  | `justify-content:space-around;`  |
+| `justify-evenly`  | `justify-content:space-evenly;`  |
+
+<hr/>
+
+#### Start
+
+使用`justify-start`可以使项目相对于容器主轴的起点进行对齐：
+
+```html
+<div class="flex justify-start ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### Center
+
+使用`justify-center`可以使沿着容器主轴中心的项目对齐：
+
+```html
+<div class="flex justify-center ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### End
+
+使用`justify-end`来使项目相对于容器主轴的末端对齐：
+
+```html
+<div class="flex justify-end ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### Space between
+
+使用`justify-between`沿着容器的主轴对齐项目，以使每个项目之间有相等的空间：
+
+```html
+<div class="flex justify-between ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### Space around
+
+使用`justify-around`沿容器的主轴对齐项目，以便每个项目的每一侧都有相等的空间：
+
+```html
+<div class="flex justify-around ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### Space evenly
+
+使用`justify-evenly`沿容器的主轴对齐项目，以使每个项目周围有相等的空间，但也要考虑到当您使用`justify-around`时，通常会在每个项目之间看到的空间增加一倍：
+
+```html
+<div class="flex justify-evenly ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+### Justify Items
+
+用于控制`grid`项如何沿其内联轴对齐的实用程序。
+
+| 类                      | 属性                     |
+| ----------------------- | ------------------------ |
+| `justify-items-auto`    | `justify-items:auto;`    |
+| `justify-items-start`   | `justify-items:start;`   |
+| `justify-items-end`     | `justify-items:end;`     |
+| `justity-items-center`  | `justify-items:center;`  |
+| `justify-items-stretch` | `justify-items:stretch;` |
+
+<hr/>
+
+#### Auto
+
+使用`justify-items-auto`在其内联轴上自动对齐网格项目：
+
+```html
+<div class="grid justify-items-auto ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Start
+
+使用`justify-items-start`相对于其内联轴的起点来对齐网格项目：
+
+```html
+<div class="grid justify-items-start ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### End
+
+使用`justify-items-end`相对于其内联轴的末端对齐网格项目：
+
+```html
+<div class="grid justify-items-end ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Center
+
+使用`justify-items-center`沿其内联轴对齐网格项目：
+
+```html
+<div class="grid justify-items-center ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Stretch
+
+使用`justify-items-stretch`沿其内联轴拉伸项目：
+
+```html
+<div class="grid justify-items-stretch ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+### Justify Self
+
+用于控制单个`grid`项如何沿其内联轴对齐的实用程序。
+
+| 类                     | 属性                    |
+| ---------------------- | ----------------------- |
+| `justify-self-auto`    | `justify-self:auto;`    |
+| `justify-self-start`   | `justify-self:start;`   |
+| `justify-self-end`     | `justify-self:end;`     |
+| `justify-self-center`  | `justify-self:center;`  |
+| `justify-self-stretch` | `justify-self:stretch;` |
+
+<hr/>
+
+#### Auto
+
+使用`justify-self-auto`根据网格的`justify-items`属性的值对齐项目：
+
+```html
+<div class="grid justify-items-stretch ...">
+  <!-- ... -->
+  <div class="justify-self-auto ...">1</div>
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+</div>
+```
+
+<hr/>
+
+#### Start
+
+使用`justify-self-start`将网格项与其内联轴的起点对齐：
+
+```html
+<div class="grid justify-items-stretch ...">
+  <!-- ... -->
+  <div class="justify-self-start ...">1</div>
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+</div>
+```
+
+#### Center
+
+使用`justify-self-center`将网格项沿其内联轴的中心对齐：
+
+```html
+<div class="grid justify-items-stretch ...">
+  <!-- ... -->
+  <div class="justify-self-center ...">1</div>
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+</div>
+```
+
+<hr/>
+
+#### End
+
+使用`justify-self-end`将网格项与其内联轴的末端对齐：
+
+```html
+<div class="grid justify-items-stretch ...">
+  <!-- ... -->
+  <div class="justify-self-end ...">1</div>
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+</div>
+```
+
+<hr/>
+
+#### Stretch
+
+使用`justify-self-stretch`拉伸网格项目以填充其内联轴上的网格区域：
+
+```html
+<div class="grid justify-items-start ...">
+  <!-- ... -->
+  <div class="justify-self-stretch ...">1</div>
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+</div>
+```
+
+<hr/>
+
+### Align Content
+
+用于控制如何在多行`flex`和`grid`容器中放置行的实用程序。
+
+| 类                | 属性                           |
+| ----------------- | ------------------------------ |
+| `content-center`  | `align-content:center;`        |
+| `content-start`   | `align-content:flex-start;`    |
+| `content-end`     | `align-content:flex-end;`      |
+| `content-between` | `align-content:space-between;` |
+| `content-around`  | `align-content:space-around;`  |
+| `content-evenly`  | `align-content:space-evenly;`  |
+
+<hr/>
+
+#### Start
+
+使用`content-start`可以将容器中的行相对于横轴的起点打包：
+
+```html
+<div class="h-48 flex flex-wrap content-start ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+```
+
+<hr/>
+
+#### Center
+
+使用`content-center`将容器中的行相对于横轴中心打包：
+
+```html
+<div class="h-48 flex flex-wrap content-center ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+```
+
+<hr/>
+
+#### End
+
+使用`content-start`可以将容器中的行相对于横轴的终点打包：
+
+```html
+<div class="h-48 flex flex-wrap content-end ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+```
+
+<hr/>
+
+#### Space between
+
+使用`content-between`来分布容器中的行，以使每行之间有相等的空间：
+
+```html
+<div class="h-48 flex flex-wrap content-between ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+```
+
+<hr/>
+
+#### Space around
+
+使用`content-around`来分布容器中的行，以便每行周围有相等的空间：
+
+```html
+<div class="h-48 flex flex-wrap content-around ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+```
+
+<hr/>
+
+### Align Items
+
+用于控制`flex`和`grid`项目如何沿容器的横轴放置的实用程序。
+
+| 类               | 属性                      |
+| ---------------- | ------------------------- |
+| `items-start`    | `align-items:flex-start;` |
+| `items-end`      | `align-items:flex-end;`   |
+| `items-center`   | `align-items:center;`     |
+| `items-baseline` | `align-items:baseline;`   |
+| `items-stretch`  | `align-items:stretch;`    |
+
+<hr/>
+
+#### Stretch
+
+使用`items-stretch`拉伸项目以填充容器的横轴：
+
+```html
+<div class="flex items-stretch ...">
+  <div class="py-4">1</div>
+  <div class="py-12">2</div>
+  <div class="py-8">3</div>
+</div>
+```
+
+<hr/>
+
+#### Start
+
+使用`items-start`将项目与容器横轴的起点对齐：
+
+```html
+<div class="flex items-start ...">
+  <div class="h-12">1</div>
+  <div class="h-24">2</div>
+  <div class="h-16">3</div>
+</div>
+```
+
+<hr/>
+
+#### Center
+
+使用`items-center`沿着容器的横轴中心对齐项目：
+
+```html
+<div class="flex items-center ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### End
+
+使用`items-end`将项目与容器横轴的末端对齐：
+
+```html
+<div class="flex items-end ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### Baseline
+
+使用`items-baseline`沿容器的横轴对齐项目，以使所有基线对齐：
+
+```html
+<div class="flex items-baseline ...">
+  <div class="pt-4 pb-6 ...">1</div>
+  <div class="pt-6 pb-10 ...">2</div>
+  <div class="pt-8 pb-4 ...">3</div>
+</div>
+```
+
+<hr/>
+
+### Align Self
+
+用于控制单个`flex`或`grid`项目如何沿其容器的横轴放置的实用程序。
+
+| 类             | 属性                     |
+| -------------- | ------------------------ |
+| `self-auto`    | `align-self:auto;`       |
+| `self-start`   | `align-self:flex-start;` |
+| `self-end`     | `align-self:flex-end;`   |
+| `self-center`  | `align-self:center;`     |
+| `self-stretch` | `align-self:stretch;`    |
+
+<hr/>
+
+#### Auto
+
+使用`self-auto`将项目根据容器的`align-items`属性的值进行对齐：
+
+```html
+<div class="flex items-stretch ...">
+  <div>1</div>
+  <div class="self-auto ...">2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### Start
+
+尽管容器具有`align-items`值，但也可以使用`self-start`将项目与容器的横轴的起点对齐：
+
+```html
+<div class="flex items-stretch ...">
+  <div>1</div>
+  <div class="self-start ...">2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### Center
+
+尽管容器具有`align-items`值，也可以使用`self-center`沿容器的横轴中心对齐项目：
+
+```html
+<div class="flex items-stretch ...">
+  <div>1</div>
+  <div class="self-center ...">2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### End
+
+尽管容器具有`align-items`值，也可以使用`self-end`将项目与容器横轴的末端对齐：
+
+```html
+<div class="flex items-stretch ...">
+  <div>1</div>
+  <div class="self-end ...">2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### Stretch
+
+尽管容器的`align-items`值，使用自拉伸来拉伸项目以填充容器的横轴：
+
+```html
+<div class="flex items-stretch ...">
+  <div>1</div>
+  <div class="self-stretch ...">2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+### Place Content
+
+用于控制内容同时用`justified`和`aligned`对齐方式的实用程序。
+
+| 类                      | 属性                           |
+| ----------------------- | ------------------------------ |
+| `place-content-center`  | `place-content:center;`        |
+| `place-content-start`   | `place-content:start;`         |
+| `place-content-end`     | `place-content:end;`           |
+| `place-content-between` | `place-content:space-between;` |
+| `place-content-around`  | `place-content:space-around;`  |
+| `place-content-evenly`  | `place-content:space-evenly;`  |
+| `place-content-stretch` | `place-content:stretch;`       |
+
+<hr/>
+
+#### Center
+
+使用`place-content-center`将项目打包在块轴的中心：
+
+```html
+<div class="grid grid-cols-3 gap-2 place-content-center h-48 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Start
+
+使用`place-content-start`相对于块轴的起点打包项目：
+
+```html
+<div class="grid grid-cols-3 gap-2 place-content-start h-48 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### End
+
+使用`place-content-end`相对于块轴的末端打包项目：
+
+```html
+<div class="grid grid-cols-3 gap-2 place-content-end h-48 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Space between
+
+使用`place-content-between`在块轴上分配网格项，以使块轴上的每一行之间有相等的空间。
+
+```html
+<div class="grid grid-cols-3 gap-2 place-content-between h-48 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Space around
+
+使用`place-content-around`分布的网格项目，以使块轴上的每一行周围有相等的空间：
+
+```html
+<div class="grid grid-cols-3 gap-2 place-content-around h-48 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Space-evenly
+
+均匀使用`place-content`来分布网格项目，以使它们在块轴上均匀分布：
+
+```html
+<div class="grid grid-cols-3 gap-2 place-content-evenly h-48 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Stretch
+
+使用`place-content-stretch`沿着网格块轴上的网格区域拉伸网格项目：
+
+```html
+<div class="grid grid-cols-3 gap-2 place-content-stretch h-48 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+### Place Items
+
+用于控制项目同时用`justified`和`aligned`对齐方式的实用程序。
+
+| 类                    | Properties              |
+| --------------------- | ----------------------- |
+| `place-items-auto`    | `place-items: auto;`    |
+| `place-items-start`   | `place-items: start;`   |
+| `place-items-end`     | `place-items: end;`     |
+| `place-items-center`  | `place-items: center;`  |
+| `place-items-stretch` | `place-items: stretch;` |
+
+<hr/>
+
+#### Auto
+
+使用`place-items-auto`将网格项目自动放置在其网格区域中：
+
+```html
+<div class="grid grid-cols-3 gap-2 place-items-auto h-48 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Start
+
+使用`place-items-start`将网格项目放置在两个轴上其网格区域的开始处：
+
+```html
+<div class="grid grid-cols-3 gap-2 place-items-start h-48 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### End
+
+使用`place-items-end`将网格项放置在两个轴上其网格区域的末端：
+
+```html
+<div class="grid grid-cols-3 gap-2 place-items-end h-48 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Center
+
+使用`place-items-center`在两个轴上将网格项放置在其网格区域的中心：
+
+```html
+<div class="grid grid-cols-3 gap-2 place-items-center h-48 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Stretch
+
+使用`place-items-stretch`在两个轴上沿其网格区域拉伸项目：
+
+```html
+<div class="grid grid-cols-3 gap-2 place-items-stretch h-48 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+### Place Self
+
+用于控制单个项目同时用`justified`和`aligned`对齐方式的实用程序。
+
+| 类                   | 属性                   |
+| -------------------- | ---------------------- |
+| `place-self-auto`    | `place-self: auto;`    |
+| `place-self-start`   | `place-self: start;`   |
+| `place-self-end`     | `place-self: end;`     |
+| `place-self-center`  | `place-self: center;`  |
+| `place-self-stretch` | `place-self: stretch;` |
+
+<hr/>
+
+#### Auto
+
+使用`place-self-auto`可以根据容器的`place-items`属性的值来对齐项目：
+
+```html
+<div class="grid grid-cols-3 gap-2 ...">
+  <div>1</div>
+  <div class="place-self-auto ...">2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Start
+
+使用`place-self-start`来使项目与两个轴上的起点对齐：
+
+```html
+<div class="grid grid-cols-3 gap-2 ...">
+  <div>1</div>
+  <div class="place-self-start ...">2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Center
+
+使用`place-self-center`来使项目在两个轴的中心对齐：
+
+```html
+<div class="grid grid-cols-3 gap-2 ...">
+  <div>1</div>
+  <div class="place-self-center ...">2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### End
+
+使用`place-self-end`将项目与两个轴的末端对齐：
+
+```html
+<div class="grid grid-cols-3 gap-2 ...">
+  <div>1</div>
+  <div class="place-self-end ...">2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
+#### Stretch
+
+使用`place-self-stretch`在两个轴上拉伸项目：
+
+```html
+<div class="grid grid-cols-3 gap-2 ...">
+  <div>1</div>
+  <div class="place-self-stretch ...">2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+<hr/>
+
