@@ -3164,3 +3164,182 @@ module.exports = {
 
 <hr/>
 
+## 间距
+
+### 内边距
+
+用于控制元素内边距的实用程序。
+
+| 类          | 属性                                              |
+| ----------- | ------------------------------------------------- |
+| `p-{size}`  | `padding:{size};`                                 |
+| `py-{size}` | `padding-top:{size};`<br>`padding-bottom:{size};` |
+| `px-{size}` | `padding-left:{size};`<br>`padding-right:{size};` |
+| `pt-{size}` | `padding-top:{size};`                             |
+| `pr-{size}` | `padding-right:{size};`                           |
+| `pb-{size}` | `padding-bottom:{size};`                          |
+| `pl-{size}` | `padding-left:{size};`                            |
+
+<hr/>
+
+#### 将内边距添加到单面
+
+使用`p {t | r | b | l}-{size}`实用程序控制元素一侧的内边距。
+
+例如，`pt-6`将在元素顶部添加`1.5rem`的内边距，`pr-4`将在元素右侧添加`1rem`的内边距，`pb-8`将在元素底部添加`2rem`的内边距，` pl-2`将在元素的左侧添加`0.5rem`的内边距。
+
+```html
+<div class="pt-6 ...">pt-6</div>
+<div class="pr-4 ...">pr-4</div>
+<div class="pb-8 ...">pb-8</div>
+<div class="pl-2 ...">pl-2</div>
+```
+
+<hr/>
+
+#### 水平添加内边距
+
+使用`px-{size}`实用程序控制元素水平内边距。
+
+```html
+<div class="px-8 ...">px-8</div>
+```
+
+<hr/>
+
+#### 垂直添加内边距
+
+使用`py-{size}`实用程序控制元素垂直内边距。
+
+```html
+<div class="py-8 ...">py-8</div>
+```
+
+<hr/>
+
+#### 在所有面添加内边距
+
+使用`p-{size}`实用程序控制元素所有面的内边距。
+
+```html
+<div class="p-8 ...">p-8</div>
+```
+
+<hr/>
+
+### 外边距
+
+用于控制元素外边距的实用程序。
+
+| 类                                  | 属性                                            |
+| ----------------------------------- | ----------------------------------------------- |
+| `m-{size}`                          | `margin:{size};`                                |
+| `-m-{size}`(后面每一种都可以加负号) | `margin:-{size};`                               |
+| `my-{size}`                         | `margin-top:{size};`<br>`margin-bottom:{size};` |
+| `mx-{size}`                         | `margin-left:{size};`<br>`margin-right:{size};` |
+| `mt-{size}`                         | `margin-top:{size};`                            |
+| `mr-{size}`                         | `margin-right:{size};`                          |
+| `mb-{size}`                         | `margin-bottom:{size};`                         |
+| `ml-{size}`                         | `margin-left:{size};`                           |
+
+<hr/>
+
+#### 将外边距添加到单面
+
+使用`m {t | r | b | l}-{size}`实用程序控制元素一侧的外边距。
+
+例如，`mt-6`将在元素顶部添加`1.5rem`的外边距，`mr-4`将在元素右侧添加`1rem`的外边距，`mb-8`将在元素底部添加`2rem`的外边距， `ml-2`将在元素左侧增加`0.5rem`的外边距。
+
+```html
+<div class="mt-8 ...">mt-8</div>
+<div class="mr-8 ...">mr-8</div>
+<div class="mb-8 ...">mb-8</div>
+<div class="ml-8 ...">ml-8</div>
+```
+
+<hr/>
+
+#### 水平添加外边距
+
+使用`mx-{size}`控制元素水平外边距。
+
+```html
+<div class="mx-8 ...">mx-8</div>
+```
+
+<hr/>
+
+#### 垂直添加外边距
+
+使用`my-{size}`控制元素垂直外边距。
+
+```html
+<div class="my-8 ...">my-8</div>
+```
+
+<hr/>
+
+#### 在所有面添加外边距
+
+使用`m-{size}`控制元素所有面的外边距。
+
+```html
+<div class="m-8 ...">m-8</div>
+```
+
+<hr/>
+
+### 元素间间距
+
+用于控制子元素之间间距的实用程序。
+
+| 类                 | 属性                                                         |
+| ------------------ | ------------------------------------------------------------ |
+| `space-y-{amount}` | `--tw-space-y-reverse:0`<br>`margin-top:calc({amount}*calc(1-var(--tw-space-y-reverse)));`<br>`margin-bottom:calc({amount}*var(--tw-space-y-reverse));` |
+| `space-y-reverse`  | `--tw-space-y-reverse:1;`                                    |
+| `space-x-{amount}` | `--tw-space-x-reverse: 0; `<br>`margin-right: calc({amount} * var(--tw-space-x-reverse)); `<br>`margin-left: calc({amount} * calc(1 - var(--tw-space-x-reverse)));` |
+| `space-x-reverse`  | `--tw-space-x-reverse: 1;`                                   |
+
+<hr/>
+
+ #### 添加水平元素间间距
+
+使用`space-x-{amount}`控制水平元素间间距。
+
+```html
+<div class="flex space-x-4 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### 添加垂直元素间间距
+
+使用`space-y-{amount}`控制垂直元素间间距。
+
+```html
+<div class="flex space-y-6 ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
+
+#### 倒置子元素顺序
+
+如果您的元素顺序相反（使用`flex-row-reverse`或`flex-col-reverse`），请使用`space-x-reverse`或`space-y-reverse`实用程序以确保将空格添加到每个元素的正确边 。
+
+```html
+<div class="flex flex-row-reverse space-x-4 space-x-reverse ...">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+<hr/>
