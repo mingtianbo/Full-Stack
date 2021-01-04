@@ -1,4 +1,6 @@
-# CSS
+
+
+# h-CSS
 
 ## Get Start
 
@@ -3343,3 +3345,376 @@ module.exports = {
 ```
 
 <hr/>
+
+## 尺寸
+
+### Width
+
+用于设置元素宽度的实用程序。
+
+| 类             | 属性                      |
+| -------------- | ------------------------- |
+| `w-{number}`   | `width:{number*0.25}rem;` |
+| `w-auto`       | `width:auto;`             |
+| `w-px`         | `width:1px;`              |
+| `w-{fraction}` | `width:{fraction}%;`      |
+| `w-full`       | `width:100%;`             |
+| `w-screen`     | `width:100vw;`            |
+| `w-min`        | `width:min-content;`      |
+| `w-max`        | `width:max-content;`      |
+
+<hr/>
+
+#### Auto
+
+使用`w-auto`让浏览器计算并选择元素的宽度。 您可以使用它来取消设置特定的宽度：
+
+```html
+<div class="w-24 md:w-auto ..."></div>
+```
+
+<hr/>
+
+#### Screen Width
+
+使用`w-screen`使元素跨越视口的整个宽度。
+
+```html
+<div class="h-12 w-screen">
+  
+</div>
+```
+
+<hr/>
+
+#### Fixed Width
+
+使用`w-{number}`或`w-px`设置元素固定宽度。
+
+```html
+<div>
+  <div class="w-8 ..."></div>
+  <div class="w-12 ..."></div>
+  <div class="w-16 ..."></div>
+  <div class="w-24 ..."></div>
+</div>
+```
+
+<hr/>
+
+#### Fluid Width
+
+使用`w- {fraction}`或`w-full`将元素设置为基于百分比的宽度。
+
+```html
+<div class="flex ...">
+  <div class="w-1/2 ...">w-1/2</div>
+  <div class="w-1/2 ...">w-1/2</div>
+</div>
+<div class="flex ...">
+  <div class="w-2/5 ...">w-2/5</div>
+  <div class="w-3/5 ...">w-3/5</div>
+</div>
+<div class="flex ...">
+  <div class="w-1/3 ...">w-1/3</div>
+  <div class="w-2/3 ...">w-2/3</div>
+</div>
+<div class="flex ...">
+  <div class="w-1/4 ...">w-1/4</div>
+  <div class="w-3/4 ...">w-3/4</div>
+</div>
+<div class="flex ...">
+  <div class="w-1/5 ...">w-1/5</div>
+  <div class="w-4/5 ...">w-4/5</div>
+</div>
+<div class="flex ...">
+  <div class="w-1/6 ...">w-1/6</div>
+  <div class="w-5/6 ...">w-5/6</div>
+</div>
+<div class="w-full ...">w-full</div>
+```
+
+<hr/>
+
+### Min-Width
+
+用来设置元素最小宽度的实用程序。
+
+| 类           | 属性                     |
+| ------------ | ------------------------ |
+| `min-w-0`    | `min-width:0px;`         |
+| `min-w-full` | `min-width:100%;`        |
+| `min-w-min`  | `min-width:min-content;` |
+| `min-w-max`  | `min-width:max-content;` |
+
+<hr/>
+
+#### Usage
+
+使用`min-w-0`或`min-w-full`实用程序设置元素的最小宽度。
+
+```html
+<div class="w-24 min-w-full ...">
+  min-w-full
+</div>
+```
+
+<hr/>
+
+### Max-Width
+
+用来设置元素最大宽度的实用程序。
+
+| 类                 | 属性                     |
+| ------------------ | ------------------------ |
+| `max-w-0`          | `max-width:0rem;`        |
+| `max-w-none`       | `max-width:none;`        |
+| `max-w-xs`         | `max-width:20rem;`       |
+| `max-w-sm`         | `max-width:24rem;`       |
+| `max-w-md`         | `max-width:28rem;`       |
+| `max-w-lg`         | `max-width:32rem;`       |
+| `max-w-xl`         | `max-width:36rem;`       |
+| `max-w-2xl`        | `max-width:42rem;`       |
+| `max-w-3xl`        | `max-width:48rem;`       |
+| `max-w-4xl`        | `max-width:56rem;`       |
+| `max-w-5xl`        | `max-width:64rem;`       |
+| `max-w-6xl`        | `max-width:72rem;`       |
+| `max-w-7xl`        | `max-width:80rem;`       |
+| `max-w-full`       | `max-width:100%;`        |
+| `max-w-min`        | `max-width:min-content;` |
+| `max-w-max`        | `max-width:max-content;` |
+| `max-w-prose`      | `max-width:65ch;`        |
+| `max-w-screen-sm`  | `max-width:640px;`       |
+| `max-w-screen-md`  | `max-width:768px;`       |
+| `max-w-screen-lg`  | `max-width:1024px;`      |
+| `max-w-screen-xl`  | `max-width:1280px;`      |
+| `max-w-screen-2xl` | `max-width:1536px;`      |
+
+<hr/>
+
+#### Usage
+
+使用`max-w-{size}`实用程序来设置元素的最大宽度。
+
+```html
+<div class="max-w-md mx-auto ...">
+  max-w-md
+</div>
+```
+
+<hr/>
+
+#### Prose
+
+默认情况下，我们添加了一个新的最大宽度`max-w-prose`。 如果您熟悉`typography plugin`，您可能会认识到这一点。 这个类的目的是让您拥有最佳的阅读宽度。
+
+```html
+<div class="max-w-prose ...">
+  <p class="font-bold">Why do you never see elements hiding in trees?</p>
+  <p>Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+</div>
+```
+
+<hr/>
+
+### Height
+
+用于设置元素高度的实用程序。
+
+| 类             | 属性                       |
+| -------------- | -------------------------- |
+| `h-{number}`   | `height:{number*0.25}rem;` |
+| `h-auto`       | `height:auto;`             |
+| `h-px`         | `height:1px;`              |
+| `h-{fraction}` | `height:{fraction}%;`      |
+| `h-full`       | `height:100%;`             |
+| `h-screen`     | `height:100vh;`            |
+
+<hr/>
+
+#### Auto
+
+使用`h-auto`让浏览器自动决定元素的高度。
+
+```html
+<div class="h-auto ...">h-auto</div>
+```
+
+<hr/>
+
+#### Screen height
+
+使用`h-screen`让元素充满整个视口的高度。
+
+```html
+<div class="h-screen p-6 ...">h-screen</div>
+```
+
+<hr/>
+
+#### Fixed height
+
+使用`h-{number}`或`h-px`设置固定高度的元素。
+
+```html
+<div>
+    <div class="h-8 ..."></div>
+    <div class="h-12 ..."></div>
+    <div class="h-16 ..."></div>
+    <div class="h-24 ..."></div>
+</div>
+```
+
+<hr/>
+
+#### Full height
+
+如果父元素的高度已定义，使用`h-full`将元素的高度设置为其父元素的高度的100％。
+
+```html
+<div class="h-48">
+  <div class="h-full ...">h-full</div>
+</div>
+```
+
+<hr/>
+
+### Min-Height
+
+用于设置元素最小高度的实用程序。
+
+| 类             | 属性                |
+| -------------- | ------------------- |
+| `min-h-0`      | `min-height:0px;`   |
+| `min-h-full`   | `min-height:100%;`  |
+| `min-h-screen` | `min-height:100vh;` |
+
+<hr/>
+
+#### Usage
+
+使用`min-h-0`，`min-h-full`或`min-h-screen`实用程序设置元素的最小高度。
+
+```html
+<div class="h-48 ...">
+  <div class="h-24 min-h-full ...">
+    .min-h-full
+  </div>
+</div>
+```
+
+<hr/>
+
+### Max-Height
+
+用于设置元素最大高度的实用程序。
+
+| 类               | 属性                      |
+| ---------------- | ------------------------- |
+| `max-h-{number}` | `max-height:{number}rem;` |
+| `max-h-px`       | `max-height:1px;`         |
+| `max-h-full`     | `max-height:100%;`        |
+| `max-h-screen`   | `max-height:100vh;`       |
+
+<hr/>
+
+#### Usage
+
+使用`max-h-full`或`max-h-screen`实用程序来设置元素的最大高度。
+
+```html
+<div class="h-24 ...">
+  <div class="h-48 max-h-full ...">
+    .max-h-full
+  </div>
+</div>
+```
+
+<hr/>
+
+## 板式
+
+### Font Family
+
+用于控制元素的字体。
+
+| 类           | 属性                                                         |
+| ------------ | ------------------------------------------------------------ |
+| `font-sans`  | `font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";` |
+| `font-serif` | `font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;` |
+| `font-mono`  | `font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;` |
+
+<hr/>
+
+#### Sans-serif
+
+使用`font-sans`来应用`Web`安全的`sans-serif`字体家族：
+
+```html
+<p class="font-sans ...">
+  The quick brown fox jumps over the lazy dog.
+</p>
+```
+
+<hr/>
+
+#### Serif
+
+使用`font-serif`来应用`Web`安全`serif`字体家族：
+
+```html
+<p class="font-serif ...">
+  The quick brown fox jumps over the lazy dog.
+</p>
+```
+
+<hr/>
+
+#### Monospaced
+
+使用`font-mono`可以应用`Web`安全`monospaced`字体家族：
+
+```html
+<p class="font-mono ...">
+  The quick brown fox jumps over the lazy dog.
+</p>
+```
+
+<hr/>
+
+### Font Size
+
+用于控制元素字体大小的实用程序。
+
+| 类          | 属性                                             |
+| ----------- | ------------------------------------------------ |
+| `text-xs`   | `font-size:0.75rem;`<br/>`line-height:1rem;`     |
+| `text-sm`   | `font-size:0.875rem;`<br/>`line-height:1.25rem;` |
+| `text-base` | `font-size:1rem;`<br/>`line-height:1.5rem;`      |
+| `text-lg`   | `font-size:1.125rem;`<br/>`line-height:1.75rem;` |
+| `text-xl`   | `font-size:1.25rem;`<br/>`line-height:1.75rem;`  |
+
+<hr/>
+
+#### Usage
+
+使用`text-{size}`实用程序来控制元素字体大小。
+
+```html
+<p class="text-xs ...">The quick brown fox ...</p>
+<p class="text-sm ...">The quick brown fox ...</p>
+<p class="text-base ...">The quick brown fox ...</p>
+<p class="text-lg ...">The quick brown fox ...</p>
+<p class="text-xl ...">The quick brown fox ...</p>
+<p class="text-2xl ...">The quick brown fox ...</p>
+<p class="text-3xl ...">The quick brown fox ...</p>
+<p class="text-4xl ...">The quick brown fox ...</p>
+<p class="text-5xl ...">The quick brown fox ...</p>
+<p class="text-6xl ...">The quick brown fox ...</p>
+<p class="text-7xl ...">The quick brown fox ...</p>
+<p class="text-8xl ...">The quick brown fox ...</p>
+<p class="text-9xl ...">The quick brown fox ...</p>
+```
+
+<hr/>
+
